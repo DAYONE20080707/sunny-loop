@@ -70,12 +70,22 @@ const HomePage = () => {
     <div>
       <KeyVisual_03 />
       <LogoMarquee />
-      <About_02 />
-      <Service_01 />
+      <section id="about" className="scroll-mt-32 md:scroll-mt-40">
+        <About_02 />
+      </section>
+      <section id="service" className="scroll-mt-32 md:scroll-mt-40">
+        <Service_01 />
+      </section>
       <Cta_01 />
-      <Blog_03 />
-      <Case_01 />
-      <Profile_02 />
+      <section id="blog" className="scroll-mt-32 md:scroll-mt-40">
+        <Blog_03 />
+      </section>
+      <section id="cases" className="scroll-mt-32 md:scroll-mt-40">
+        <Case_01 />
+      </section>
+      <section id="company" className="scroll-mt-32 md:scroll-mt-40">
+        <Profile_02 />
+      </section>
       <Aside_01 />
     </div>
   )
