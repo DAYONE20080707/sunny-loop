@@ -11,14 +11,13 @@ import Cta_03 from "@/components/ui/module/cta/Cta_03"
 import PageContent from "@/components/ui/frame/PageContent"
 import BreadcrumbContainer from "@/components/ui/module/BreadcrumbContainer"
 
-// よくある質問
+// お役立ち情報
 const BlogPage = () => {
   return (
     <PageContent>
       <BreadcrumbContainer items={[{ name: "お役立ち情報" }]} />
       <Lowerkv_01 enTitle="TOPICS" mainTitle="お役立ち情報" />
       <LowerBlog_01 />
-      <Cta_01 />
     </PageContent>
   )
 }
