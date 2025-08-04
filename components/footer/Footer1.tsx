@@ -12,13 +12,13 @@ import ContactButton from "@/components/ui/button/ContactButton"
 const Footer1 = () => {
   const { companyName, companyPostalCode, companyAddress } = CompanyInfo[0]
   return (
-    <footer className="border-t py-10 md:py-24 px-4 md:px-0">
+    <footer className="border-t py-10 md:py-24 px-4 md:px-0 bg-baseColor text-white">
       <div className="md:max-w-[1400px] mx-auto">
         <div className="md:flex justify-between">
           <div className="space-y-3">
             <h4 className="w-[100px]">{CompanyInfo[0].companyName("tertiary")}</h4>
-            <p>
-              <span className="">{companyPostalCode}</span>
+            <p className="font-light">
+              {companyPostalCode}<br />
               {companyAddress}
             </p>
           </div>
@@ -33,13 +33,13 @@ const Footer1 = () => {
               ))}
             </ul>
             <div className="md:w-[198px] mt-7">
-              <ContactButton className="h-14 rounded-xl" />
+              <ContactButton className="![border-radius:0]" />
             </div>
           </div>
         </div>
         <div className="md:flex justify-between items-center !border-t border-borderGray mt-4 pt-4 ">
           <div className="flex flex-col items-center justify-center text-sm space-y-5">
-            <ul className="flex items-center justify-end font-semibold  space-x-5 md:space-x-0">
+            {/* <ul className="flex items-center justify-end font-semibold  space-x-5 md:space-x-0">
               {Sns.map((item, index) => (
                 <li
                   key={index}
@@ -55,9 +55,9 @@ const Footer1 = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
-          <ul className="md:flex items-center md:space-x-10 font-light mt-5 md:mt-0 space-y-5 md:space-y-0">
+          <ul className="md:flex items-center md:space-x-10 font-light mt-4 md:mt-0 space-y-5 md:space-y-0 py-4">
             {FooterLinks.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
@@ -67,8 +67,8 @@ const Footer1 = () => {
             ))}
           </ul>
         </div>
-        <small className="mt-4 flex justify-end items-center">
-          ©<span className="w-[130px] px-1">{CompanyInfo[0].companyName("secondary")}</span>. ALL Rights Reserved.
+        <small className="mt-8 flex justify-end items-center font-light">
+          ©0000aaaaa. ALL Rights Reserved.
         </small>
       </div>
     </footer>

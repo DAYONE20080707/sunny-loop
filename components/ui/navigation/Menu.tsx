@@ -1,27 +1,33 @@
 //components/ui/navigation/Menu.tsx
 export const Menu = [
   {
-    name: 'WHO WE ARE',
+    enName:'WHO WE ARE',
+    name: '私たちについて',
     href: '/#services',
   },
   {
-    name: 'OUR SERVICE',
+    enName:'OUR SERVICE',
+    name: 'サービス',
     href: '/#services',
   },
 
   {
-    name: 'TOPICS',
-    href: '/#blog',
+    enName:'TOPICS',
+    name: 'お役立ち情報',
+    href: '/blog',
   },
   {
-    name: 'CASES',
+    enName:'CASES',
+    name: '導入事例',
     href: '/#cases',
   },
   {
-    name: 'COMPANY PROFILE',
+    enName:'COMPANY PROFILE',
+    name: '会社概要',
     href: '/#company',
   },
   {
+    enName:'contact',
     name: 'お問い合わせ',
     href: '/contact',
   },

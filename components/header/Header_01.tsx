@@ -64,7 +64,7 @@ const Header_01 = () => {
               {filteredMenu.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>
-                    <div>{item.name}</div>
+                    <div>{item.enName}</div>
                   </Link>
                 </li>
               ))}
@@ -124,7 +124,7 @@ const Header_01 = () => {
             {filteredMenu.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
-                  <div onClick={handleMenuToggle}>{item.name}</div>
+                  <div onClick={handleMenuToggle}>{item.enName}</div>
                 </Link>
               </li>
             ))}
