@@ -16,7 +16,7 @@ const ContactButton = ({
       className={`bg-accentColor text-white cursor-pointer flex items-center justify-center px-10 py-4 rounded-[10px] font-semibold tracking-[0.03em] leading-[160%] ${className}`}
       onClick={onClick}
     >
-      <EnvelopeIcon className="w-[14px] h-[10px] mr-1" />
+      <EnvelopeIcon className="w-[25px] h-[17px] mr-1" />
       {children}
     </Link>
   )

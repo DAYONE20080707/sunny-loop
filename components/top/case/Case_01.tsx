@@ -86,7 +86,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
             ))}
           </div>
           <div className="flex justify-center mt-16">
-            <MoreButton className="text-accentColor border-accentColor" />
+            <MoreButton className="text-accentColor border-accentColor" href="/cases" />
           </div>
         </section>
       </SectionContent>

@@ -16,21 +16,26 @@ const Footer1 = () => {
       <div className="md:max-w-[1400px] mx-auto">
         <div className="md:flex justify-between">
           <div className="space-y-3">
-            <h4 className="w-[100px]">{CompanyInfo[0].companyName("tertiary")}</h4>
+            <h4 className="w-[100px]">
+              {CompanyInfo[0].companyName("tertiary")}
+            </h4>
             <p className="font-light">
-              {companyPostalCode}<br />
+              {companyPostalCode}
+              <br />
               {companyAddress}
             </p>
           </div>
           <div className="flex flex-col md:items-end mt-5 md:mt-0">
             <ul className="md:flex items-center md:space-x-10 font-light space-y-5 md:space-y-0">
-              {Menu.map((item, index) => (
-                <li key={index}>
-                  <Link href={item.href}>
-                    <div>{item.name}</div>
-                  </Link>
-                </li>
-              ))}
+              {Menu.filter((item) => item.name !== "お問い合わせ").map(
+                (item, index) => (
+                  <li key={index}>
+                    <Link href={item.href}>
+                      <div>{item.name}</div>
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
             <div className="md:w-[198px] mt-7">
               <ContactButton className="![border-radius:0]" />

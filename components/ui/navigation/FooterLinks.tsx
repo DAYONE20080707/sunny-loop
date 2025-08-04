@@ -2,7 +2,7 @@
 export const FooterLinks = [
   {
     name: '個人情報の取り扱いについて',
-    href: '/',
+    href: '/privacy',
   },
 
 

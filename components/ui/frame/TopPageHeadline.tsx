@@ -29,7 +29,7 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   return (
     <section
       className={classNames(
-        "md:md:max-w-[1200px] w-full px-4 md:px-0",
+        "md:md:max-w-[1200px] w-full ",
         className
       )}
     >
@@ -48,13 +48,13 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "text-[60px] md:text-[120px] leading-[110%] font-medium tracking-[6px] text-accentColor font-outfit",
+          "text-[55px] md:text-[120px] leading-[110%] font-medium tracking-[0.05em] text-accentColor font-outfit",
           titleClassName
         )}
       >
         {mainTitle}
       </h1>
-      <h3 className={classNames("text-2xl md:text-[32px] mt-10 text-accentColor", subtitleClassName)}>
+      <h3 className={classNames("text-xl md:text-[32px] mt-10 text-accentColor", subtitleClassName)}>
         {subtitleBottom}
       </h3>
       <p
