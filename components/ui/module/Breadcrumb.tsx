@@ -1,31 +1,42 @@
-// components/ui/main/module/Breadcrumb.tsx
-
+// components/ui/module/Breadcrumb.tsx
 import Link from "next/link"
-import { ChevronRight } from "react-feather"
+import { ChevronRightIcon } from "@heroicons/react/24/outline"
 
-interface BreadcrumbProps {
-  mainTitle: React.ReactNode
-  parentDirectoryName?: string
-  parentDirectoryLink?: string
+interface BreadcrumbItem {
+  name: string
+  href?: string
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({
-  mainTitle,
-  parentDirectoryName,
-  parentDirectoryLink,
-}) => {
+interface BreadcrumbProps {
+  items: BreadcrumbItem[]
+  className?: string
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = "" }) => {
   return (
-    <div className="text-sm text-white mb-3 flex items-center space-x-1 flex-wrap">
-      <Link href="/">トップページ</Link>
-      <ChevronRight className="w-4 h-4" />
-      {parentDirectoryName && parentDirectoryLink && (
-        <>
-          <Link href={parentDirectoryLink}>{parentDirectoryName}</Link>
-          <ChevronRight className="w-4 h-4" />
-        </>
-      )}
-      <div>{mainTitle}</div>
-    </div>
+    <nav className={`flex items-center space-x-2 text-xs ${className}`}>
+      <Link
+        href="/"
+        className="text-baseColor hover:opacity-80 transition-opacity"
+      >
+        トップページ
+      </Link>
+      {items.map((item, index) => (
+        <div key={index} className="flex items-center space-x-2">
+          <ChevronRightIcon className="w-4 h-4 text-black" />
+          {item.href ? (
+            <Link
+              href={item.href}
+              className="text-accentColor hover:opacity-80 transition-opacity"
+            >
+              {item.name}
+            </Link>
+          ) : (
+            <span className="text-gray-600">{item.name}</span>
+          )}
+        </div>
+      ))}
+    </nav>
   )
 }
 
