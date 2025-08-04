@@ -31,10 +31,7 @@ const KeyVisual_03 = () => {
         <div className="md:max-w-[1440px] mx-auto flex flex-col pt-32 md:pt-0 px-5 md:justify-center h-full relative">
           <TopPageHeadline
             mainTitle={
-              <>
-                <span>Infinite</span>
-                <br />
-                <span>Possibilities</span>
+              <>Infinite <br />Possibilities
               </>
             }
             subtitleBottom="SNSで、∞の可能性を形にする。"
