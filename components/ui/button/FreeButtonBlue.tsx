@@ -15,7 +15,7 @@ const FreeButtonWhite = ({
   return (
     <Link
       href={href}
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-between w-[90vw] max-w-[350px] px-6 py-4 font-semibold relative group  ${className}`}
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-between w-[90vw] max-w-[350px] px-6 py-4 relative group  ${className}`}
     >
       {text}
       <svg
