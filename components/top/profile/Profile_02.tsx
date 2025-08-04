@@ -7,11 +7,12 @@ import Link from "next/link"
 import ContentHeadline from "@/components/ui/frame/ContentHeadline"
 import PageContent from "@/components/ui/frame/PageContent"
 import ProfileCard from "@/components/ui/ItemCard/ProfileCard"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 const Profile_02 = () => {
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="bg-bgLightBlue">
         <section className="md:max-w-[1200px] mx-auto">
           <ContentHeadline
             enTitle="COMPANY PROFILE"
@@ -52,7 +53,7 @@ const Profile_02 = () => {
             </div>
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   )
 }
