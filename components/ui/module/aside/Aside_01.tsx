@@ -9,20 +9,21 @@ import MoreButton from "@/components/ui/button/MoreButton";
 const Aside_01 = () => {
   return (
     <>
-      <PageContent className="bg-white px-0 pt-0">
-        <section className="md:max-w-[1200px] py-10 md:py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white px-4">
-          <p className="md:text-lg font-bold">料金プラン</p>
-          <h4 className="text-3xl md:text-[40px] font-poppins font-bold">
-            Plan
+      <div className="bg-white p-10 ">
+        <section className="md:max-w-[1840px] py-10 md:py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white px-4 rounded-[10px]">
+       
+          <h4 className="text-3xl md:text-[64px] font-lato font-extrabold uppercase leading-[120%]">
+            Contact
           </h4>
-          <p className="text-center md:text-lg font-medium md:w-[495px] my-6">
-            御社のニーズに沿ったプランをご用意しております。
+          <p className="text-center md:text-lg mt-6 leading-[160%] tracking-[0.03em]">
+          あなたの事業に合った最適なSNS戦略・映像施策をご提案します。<br />
+          ご相談・お見積もりは、下記フォームよりお気軽にご連絡ください。
           </p>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center mt-6">
             <MoreButton className="!bg-white !text-accentColor" />
           </div>
         </section>
-      </PageContent>
+      </div>
     </>
   );
 };
