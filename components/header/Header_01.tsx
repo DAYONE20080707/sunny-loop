@@ -46,7 +46,7 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 ${
+        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 ${
           isScrolled ? "" : ""
         }`}
       >
@@ -68,13 +68,13 @@ const Header_01 = () => {
                   </Link>
                 </li>
               ))}
-           <ContactButton className="w-fit">CONTACT US</ContactButton>
+              <ContactButton className="w-fit">CONTACT US</ContactButton>
             </ul>
           </div>
 
           {/* ハンバーガーメニューボタン */}
           <button
-            className={`block md:hidden text-white transition-transform duration-300 ${
+            className={`block md:hidden text-black transition-transform duration-300 ${
               isMenuOpen ? "rotate-90" : "rotate-0"
             }`}
             onClick={handleMenuToggle}
