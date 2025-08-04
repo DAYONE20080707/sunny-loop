@@ -53,7 +53,7 @@ const AboutSection_01 = ({
           )}
         </div>
       </div>
-      <section className="md:w-[95%] h-[250px] md:h-[380px] mx-auto mt-10 md:mt-24  flex justify-center relative">
+      {/* <section className="md:w-[95%] h-[250px] md:h-[380px] mx-auto mt-10 md:mt-24  flex justify-center relative">
         <Image
           src="/top/message/message_img.png"
           alt="message"
@@ -61,7 +61,7 @@ const AboutSection_01 = ({
           objectFit="cover" // 画像を親要素に合わせてトリミング
           className="block "
         />
-      </section>
+      </section> */}
     </>
   );
 };
