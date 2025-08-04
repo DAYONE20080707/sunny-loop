@@ -39,7 +39,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
   }, [limit]);
 
   if (loading) {
-    return <h1 className="min-h-[967px]">Loading...</h1>;
+    return <h1 className="min-h-[1508px] md:min-h-[967px]">Loading...</h1>;
   }
 
   if (!contents || contents.length === 0) {

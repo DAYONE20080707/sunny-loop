@@ -130,7 +130,10 @@ const Header_01 = () => {
             ))}
             {/* ContactButton */}
             <li>
-              <ContactButton className="w-full py-4 font-normal" />
+              <ContactButton
+                className="w-full py-4 font-normal"
+                onClick={handleMenuToggle}
+              />
             </li>
           </ul>
         </div>
