@@ -1,30 +1,30 @@
 // components/ui/frame/TopPageHeadline.tsx
-import classNames from "classnames";
+import classNames from "classnames"
 
 interface TopPageHeadlineProps {
-  mainTitle: React.ReactNode;
-  subtitleTop?: React.ReactNode;
-  subtitleBottom?: React.ReactNode;
-  discription?: React.ReactNode;
-  parentDirectoryName?: string;
-  parentDirectoryLink?: string;
-  className?: string; // 親要素のclassName
-  titleClassName?: string; // h1用のclassName
-  subtitleClassName?: string; // h2用のclassName
-  discriptionClassName?: string; // p用のclassName
+  mainTitle: React.ReactNode
+  subtitleTop?: React.ReactNode
+  subtitleBottom?: React.ReactNode
+  description?: React.ReactNode
+  parentDirectoryName?: string
+  parentDirectoryLink?: string
+  className?: string // 親要素のclassName
+  titleClassName?: string // h1用のclassName
+  subtitleClassName?: string // h2用のclassName
+  descriptionClassName?: string // p用のclassName
 }
 
 const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
   mainTitle,
   subtitleTop,
   subtitleBottom,
-  discription,
+  description,
   parentDirectoryName,
   parentDirectoryLink,
   className = "",
   titleClassName = "",
   subtitleClassName = "",
-  discriptionClassName = "",
+  descriptionClassName = "",
 }) => {
   return (
     <section
@@ -48,20 +48,25 @@ const TopPageHeadline: React.FC<TopPageHeadlineProps> = ({
       </h2>
       <h1
         className={classNames(
-          "text-4xl leading-normal md:text-[50px] md:leading-[88px] font-medium tracking-[4px]",
+          "text-4xl leading-normal md:text-[120px] md:leading-[132px] font-medium tracking-[6px] text-accentColor font-outfit",
           titleClassName
         )}
       >
         {mainTitle}
       </h1>
-      <h3 className={classNames("md:text-lg mt-4", subtitleClassName)}>
+      <h3 className={classNames("md:text-[32px] mt-10 text-accentColor", subtitleClassName)}>
         {subtitleBottom}
       </h3>
-      <p className={classNames("mt-4 md:text-lg ", discriptionClassName)}>
-        {discription}
+      <p
+        className={classNames(
+          "mt-4 md:text-lg whitespace-pre-line",
+          descriptionClassName
+        )}
+      >
+        {description}
       </p>
     </section>
-  );
-};
+  )
+}
 
-export default TopPageHeadline;
+export default TopPageHeadline

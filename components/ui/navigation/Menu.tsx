@@ -1,17 +1,25 @@
 //components/ui/navigation/Menu.tsx
 export const Menu = [
   {
-    name: '提供プラン',
+    name: 'WHO WE ARE',
     href: '/#services',
   },
   {
-    name: '事業所のご案内',
-    href: '/#about',
+    name: 'OUR SERVICE',
+    href: '/#services',
   },
 
   {
-    name: '料金プラン',
-    href: '/#plan',
+    name: 'TOPICS',
+    href: '/#blog',
+  },
+  {
+    name: 'CASES',
+    href: '/#cases',
+  },
+  {
+    name: 'COMPANY PROFILE',
+    href: '/#company',
   },
   {
     name: 'お問い合わせ',

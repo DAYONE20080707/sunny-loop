@@ -19,20 +19,21 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        'flow-arrow': "url('/flow/arrow-right.svg')"
+        "flow-arrow": "url('/flow/arrow-right.svg')",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-        lato: ["Lato", "sans-serif"],
-        spectral: ['Spectral', 'serif'],
+        notoSansJP: ["var(--font-noto-sans-jp)", "sans-serif"],
+        outfit: ["var(--font-outfit)", "sans-serif"],
+        lato: ["var(--font-lato)", "sans-serif"],
+        spectral: ["var(--font-spectral)", "serif"],
         zenKaku: ["'Zen Kaku Gothic New'", "sans-serif"],
       },
       colors: {
-        accentColor: "#4270ED",
-        baseColor:"#393939",
+        accentColor: "#1201CB",
+        baseColor: "#050F1C",
         borderGray: "#393939",
         bgBlack: "#333333",
-        bgLightBlue: "#f7fcff",
+        bgLightBlue: "#EDF2FA",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

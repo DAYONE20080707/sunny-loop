@@ -67,16 +67,14 @@ import Aside_02 from "@/components/ui/module/aside/Aside_02";
 const HomePage = () => {
   return (
     <div>
-      {/* <KeyVisual_01 /> */}
-      <KeyVisual_01 />
-      {/* <About_01 /> */}
-      <About_01 />
-      {/* <Service_01 /> */}
-      <Service_04 />
-      <Strength_04 />
+      <KeyVisual_03 />
+      <About_02 />
+      <Service_01 />
+      <Cta_01 />
+      <Case_03 />
+      <Blog_01 />
+      <Profile_02 />
       <Aside_01 />
-      <Profile_04 />
-      <Cta_03 />
     </div>
   );
 };

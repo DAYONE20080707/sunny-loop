@@ -20,7 +20,7 @@ const KeyVisual_03 = () => {
       <FirstViewContent className="relative h-screen ">
         {/* widthがフルサイズでない場合は指定する */}
         {/* キービジュアルの画像 */}
-        <section className="w-[65%] h-full absolute right-0 ">
+        <section className="w-[100%] h-full absolute right-0 ">
           {/* KeyVisualContentに高さを指定 */}
           <KeyVisualContent className="h-screen md:h-full" />
         </section>
@@ -28,16 +28,17 @@ const KeyVisual_03 = () => {
           <TopPageHeadline
             mainTitle={
               <>
-                <span>Lorem Ipsum</span>
+                <span>Infinite</span>
                 <br />
-                <span>Lorem Ipsum</span>
+                <span>Possibilities</span>
               </>
             }
-            subtitleBottom="日本語のテキストが入ります。"
+            subtitleBottom="SNSで、∞の可能性を形にする。"
+            description={`私たちは、SNSという日常に根差したメディアに、\n社会や事業の"想い"を正しく届け、\n信頼と行動へ変えていく責任を担っています。\n課題を可視化し、最適な一手を導き出し、成果へとつなげる──。\nその積み重ねこそが、SNSに宿る"∞の可能性"を形にすると信じています。`}
           />
           {/* スクロールボタン */}
           <div className="absolute left-4 md:left-0 bottom-4 md:bottom-20">
-            <ScrollButton onClick={scrollToNextSection} />
+            <ScrollButton onClick={scrollToNextSection} color="#1201CB" />
           </div>
         </div>
       </FirstViewContent>
