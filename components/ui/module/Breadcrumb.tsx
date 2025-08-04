@@ -27,7 +27,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = "" }) => {
           {item.href ? (
             <Link
               href={item.href}
-              className="text-accentColor hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity"
             >
               {item.name}
             </Link>

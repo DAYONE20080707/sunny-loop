@@ -9,6 +9,7 @@ import { Work } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface BlogProps {
   limit?: number;
@@ -56,7 +57,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
 
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="">
         <section className="md:max-w-[1200px] mx-auto">
           {/* <ContentHeadline
             enTitle="Blog"
@@ -64,14 +65,14 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
             enTitleClassName=""
             titleClassName=""
           /> */}
-          <div className="flex flex-wrap justify-start md:justify-center gap-x-5 md:gap-20 rounded-full bg-white mx-auto px-5 md:px-20 w-fit">
+          <div className="flex flex-wrap justify-start md:justify-center gap-x-5 md:gap-20 rounded-full bg-accentColor text-white mx-auto px-5 md:px-20 w-fit">
             {CATEGORIES.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-1 py-4 transition-all font-bold whitespace-nowrap ${
                   activeCategory === category.id
-                    ? "text-accentColor border-b-4 border-accentColor"
+                    ? "text-white border-b-4 border-white"
                     : "hover:text-accentColor"
                 }`}
               >
@@ -109,8 +110,8 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                           />
                         )}
                       </div>
-                      <div className="bg-white p-6">
-                        <p className="text-lg font-bold break-words min-h-14">
+                      <div className="bg-white py-6">
+                        <p className="text-lg font-medium break-words min-h-14 text-accentColor">
                           {post.title}
                         </p>
                         <p className="mt-2 text-base line-clamp-2">
@@ -145,7 +146,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
             </>
           )}
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };
