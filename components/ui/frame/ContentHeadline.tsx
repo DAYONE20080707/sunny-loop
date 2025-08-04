@@ -37,7 +37,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       )}
       <h3
         className={classNames(
-          "text-lg font-extrabold font-lato uppercase",
+          "text-lg font-extrabold font-lato uppercase tracking-[0.03em] leading-[160%]",
           variant === "white" ? "text-white" : "text-accentColor",
           enTitleClassName
         )}
@@ -51,7 +51,14 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
           titleClassName
         )}
       >
-        {mainTitle}
+        {typeof mainTitle === "string"
+          ? mainTitle.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < mainTitle.split("\n").length - 1 && <br />}
+              </React.Fragment>
+            ))
+          : mainTitle}
       </h1>
       {subTitle && (
         <h2 className={variant === "white" ? "text-white" : "text-accentColor"}>
