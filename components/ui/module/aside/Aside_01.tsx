@@ -9,7 +9,7 @@ import MoreButton from "@/components/ui/button/MoreButton";
 const Aside_01 = () => {
   return (
     <>
-      <div className="bg-white p-10 ">
+      <div className="bg-white p-5 md:p-10 ">
         <section className="md:max-w-[1840px] py-10 md:py-16 mx-auto bg-[url('/aside/aside.png')] bg-no-repeat bg-cover flex flex-col items-center  text-white px-4 rounded-[10px]">
        
           <h4 className="text-3xl md:text-[64px] font-lato font-extrabold uppercase leading-[120%]">

@@ -21,7 +21,7 @@ const About_02 = () => {
             enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <p className="leading-[250%] tracking-[0.03em] text-lg text-center">私たちは、SNSを一過性の手段ではなく、 <br />
+          <p className="leading-[250%] tracking-[0.03em] text-sm md:text-lg text-center">私たちは、SNSを一過性の手段ではなく、 <br />
             信頼を育み、価値を積み上げる“長期的な資産”と捉えています。<br />
              一つひとつの取り組みに誠実に向き合い、日々の実行と改善を重ねながら、 <br />
              お客様の未来を共につくるパートナーであり続けます。</p>

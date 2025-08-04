@@ -20,7 +20,7 @@ const Profile_02 = () => {
             enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <div className="mt-16 p-10 md:flex md:justify-between">
+          <div className="mt-16 md:p-10 md:flex md:justify-between">
             <div>
               <ProfileCard label="設立" value="2024年10月11日" />
               <ProfileCard

@@ -15,7 +15,7 @@ const SectionContent: React.FC<SectionContentProps> = ({
   return (
     <div
       className={classNames(
-        "mx-auto py-14 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
+        "mx-auto py-16 md:py-[120px] px-4 md:px-5 overflow-x-hidden",
         className
       )}
     >
