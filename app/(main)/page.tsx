@@ -73,8 +73,8 @@ const HomePage = () => {
       <About_02 />
       <Service_01 />
       <Cta_01 />
-      <Case_03 />
-      <Blog_01 />
+      <Blog_03 />
+      <Case_01 />
       <Profile_02 />
       <Aside_01 />
     </div>
