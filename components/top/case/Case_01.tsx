@@ -10,6 +10,7 @@ import { Work } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
 import PageContent from "@/components/ui/frame/PageContent";
 import MoreButton from "@/components/ui/button/MoreButton";
+import SectionContent from "@/components/ui/frame/SectionContent";
 
 interface CaseProps {
   limit?: number;
@@ -50,7 +51,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
 
   return (
     <>
-      <PageContent className="">
+      <SectionContent className="">
         <section className="md:max-w-[1200px] mx-auto md:space-y-16">
         <ContentHeadline
             enTitle="Cases"
@@ -88,7 +89,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
             <MoreButton className="text-accentColor border-accentColor" />
           </div>
         </section>
-      </PageContent>
+      </SectionContent>
     </>
   );
 };

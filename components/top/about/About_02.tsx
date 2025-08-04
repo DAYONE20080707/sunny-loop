@@ -12,7 +12,7 @@ import AboutSection from "@/components/ui/module/AboutSection_02"
 const About_02 = () => {
   return (
     <>
-      <div className="mx-auto py-14 md:pb-[120px] pt-0 px-5 md:px-5 overflow-x-hidden max-w-[1800px]">
+      <div id="#about" className="mx-auto py-14 md:pb-[120px] pt-0 px-5 md:px-5 overflow-x-hidden max-w-[1800px]">
         {/* widthがフルサイズでない場合は指定する */}
         <section className="py-10 px-5 md:p-24 bg-bgLightBlue flex flex-col items-center rounded-[20px]">
           <ContentHeadline

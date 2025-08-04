@@ -79,7 +79,7 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
                     />
                   )}
                 </div>
-                <div className="bg-white mt-6">
+                <div className="mt-6">
                   <p className="text-lg font-bold md:min-h-14 leading-[160%] tracking-[0.03em]">
                     {post.title}
                   </p>

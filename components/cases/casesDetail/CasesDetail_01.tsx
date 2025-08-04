@@ -9,13 +9,13 @@ import SectionContent from "@/components/ui/frame/SectionContent"
 import BreadcrumbContainer from "@/components/ui/module/BreadcrumbContainer"
 import Aside_01 from "@/components/ui/module/aside/Aside_01"
 
-interface BlogDetailProps {
+interface CasesDetailProps {
   params: {
     id: string
   }
 }
 
-export default async function BlogDetail_01({ params }: BlogDetailProps) {
+export default async function CasesDetail_01({ params }: CasesDetailProps) {
   const { id } = params
 
   try {

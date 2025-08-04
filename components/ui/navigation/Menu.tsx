@@ -3,12 +3,12 @@ export const Menu = [
   {
     enName:'WHO WE ARE',
     name: '私たちについて',
-    href: '/#services',
+    href: '/#about',
   },
   {
     enName:'OUR SERVICE',
     name: 'サービス',
-    href: '/#services',
+    href: '/#service',
   },
 
   {
@@ -19,7 +19,7 @@ export const Menu = [
   {
     enName:'CASES',
     name: '導入事例',
-    href: '/#cases',
+    href: '/cases',
   },
   {
     enName:'COMPANY PROFILE',
