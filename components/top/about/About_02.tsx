@@ -1,47 +1,35 @@
 // components/message/About_02.tsx
 
-"use client";
+"use client"
 
-import MoreLinkButton from "@/components/ui/button/MoreButton";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import SectionContent from "@/components/ui/frame/SectionContent";
-import Image from "next/image";
-import AboutSection from "@/components/ui/module/AboutSection_02";
+import MoreLinkButton from "@/components/ui/button/MoreButton"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import SectionContent from "@/components/ui/frame/SectionContent"
+import Image from "next/image"
+import AboutSection from "@/components/ui/module/AboutSection_02"
 
 // メッセージ
 const About_02 = () => {
   return (
     <>
-      <SectionContent className="![padding-bottom:0]">
+      <div className="mx-auto py-14 md:pb-[120px] pt-0 px-5 md:px-5 overflow-x-hidden max-w-[1800px]">
         {/* widthがフルサイズでない場合は指定する */}
-        <section className=" md:max-w-[1200px] mx-auto ">
+        <section className="py-10 px-5 md:p-24 bg-bgLightBlue flex flex-col items-center rounded-[20px]">
           <ContentHeadline
             enTitle="Who we are"
-            mainTitle="私たちについて"
+            mainTitle="価値を育てるSNSの伴走者 "
             enTitleClassName="text-center"
             titleClassName="text-center"
           />
-          <AboutSection
-            title="無数の選択肢の中から\nベストな選択を"
-            description={`経営者は日々悩んでいます。そして、日々決断しています。
-
-一番成果が上がる選択はどれか。一番効率のいい選択はどれか。
-無数の選択肢の中からベストな選択ができるよう、
-常に試行錯誤し決断しています。
-
-私たちはその決断が本当にベストなのか、検討しています。
-そして、その決断が本当のベストになるためのサポートを
-常に用意しています。`}
-            buttonHref="/about"
-            // 以下は任意
-            // imageUrl="/path/to/image.jpg"
-            // position="役職役職"
-            // name="氏名　氏名"
-          />
+          <p className="leading-[250%] tracking-[0.03em] text-sm md:text-lg text-center">私たちは、SNSを一過性の手段ではなく、 <br />
+            信頼を育み、価値を積み上げる“長期的な資産”と捉えています。<br />
+             一つひとつの取り組みに誠実に向き合い、日々の実行と改善を重ねながら、 <br />
+             お客様の未来を共につくるパートナーであり続けます。</p>
+        
         </section>
-      </SectionContent>
+      </div>
     </>
-  );
-};
+  )
+}
 
-export default About_02;
+export default About_02

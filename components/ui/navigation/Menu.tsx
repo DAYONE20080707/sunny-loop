@@ -1,21 +1,35 @@
 //components/ui/navigation/Menu.tsx
 export const Menu = [
   {
-    name: '提供プラン',
-    href: '/#services',
+    enName: "WHO WE ARE",
+    name: "私たちについて",
+    href: "/#about",
   },
   {
-    name: '事業所のご案内',
-    href: '/#about',
+    enName: "OUR SERVICE",
+    name: "サービス",
+    href: "/#service",
   },
 
   {
-    name: '料金プラン',
-    href: '/#plan',
+    enName: "TOPICS",
+    name: "お役立ち情報",
+    href: "/blog",
   },
   {
-    name: 'お問い合わせ',
-    href: '/contact',
+    enName: "CASES",
+    name: "導入事例",
+    href: "/cases",
+  },
+  {
+    enName: "COMPANY PROFILE",
+    name: "会社概要",
+    href: "/#company",
+  },
+  {
+    enName: "contact",
+    name: "お問い合わせ",
+    href: "/contact",
   },
   // {
   //   name: 'Case study',
@@ -25,20 +39,18 @@ export const Menu = [
   //   name: 'Blog',
   //   href: '/#blog',
   // },
-//   {
-//     name: 'Plan',
-//     href: '/#plan',
-//   },
-//   {
-//     name: 'Flow',
-//     href: '/#flow',
-//   },
-//   {
-//     name: 'FAQ',
-//     href: '/#faq',
-//   },
-
-
+  //   {
+  //     name: 'Plan',
+  //     href: '/#plan',
+  //   },
+  //   {
+  //     name: 'Flow',
+  //     href: '/#flow',
+  //   },
+  //   {
+  //     name: 'FAQ',
+  //     href: '/#faq',
+  //   },
 ]
 
 export default Menu

@@ -10,7 +10,7 @@ interface PageContentProps {
 
 const PageContent: React.FC<PageContentProps> = ({ children, className }) => {
   return (
-    <div className={classNames(" mx-auto py-14 md:py-24 border-b-2 px-4 md:px-0", className)}>
+    <div className={classNames(" mx-auto pt-14 md:pt-[178px] border-b-2 px-0 md:px-5", className)}>
       {children}
     </div>
   )

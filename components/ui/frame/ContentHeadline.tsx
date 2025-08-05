@@ -1,8 +1,8 @@
 // components/ui/frame/ContentHeadline.tsx
-import React from "react";
-import classNames from "classnames";
-import { ContentHeadlineProps } from "@/types";
-import Image from "next/image";
+import React from "react"
+import classNames from "classnames"
+import { ContentHeadlineProps } from "@/types"
+import Image from "next/image"
 
 const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   mainTitle,
@@ -15,11 +15,16 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
   ImageWidth,
   ImageHeight,
   id,
+  variant = "default",
 }) => {
   return (
     <section
       id={id}
-      className={classNames("w-full md:max-w-[1200px] mb-16 tracking-wide", className)}
+      className={classNames(
+        "w-full md:max-w-[1200px] mb-10 md:mb-16 tracking-wide",
+        variant === "white" ? "text-white" : "text-accentColor",
+        className
+      )}
     >
       {ImageSrc && (
         <Image
@@ -32,7 +37,8 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       )}
       <h3
         className={classNames(
-          "text-lg text-accentColor font-bold font-poppins",
+          "text-sm md:text-lg font-extrabold font-lato uppercase tracking-[0.03em] leading-[160%]",
+          variant === "white" ? "text-white" : "text-accentColor",
           enTitleClassName
         )}
       >
@@ -40,15 +46,27 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       </h3>
       <h1
         className={classNames(
-          "text-[28px] md:text-[40px] font-bold",
+          "text-[24px] md:text-[40px] font-medium tracking-[0.03em] leading-[160%]",
+          variant === "white" ? "text-white" : "text-accentColor",
           titleClassName
         )}
       >
-        {mainTitle}
+        {typeof mainTitle === "string"
+          ? mainTitle.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index < mainTitle.split("\n").length - 1 && <br />}
+              </React.Fragment>
+            ))
+          : mainTitle}
       </h1>
-      {subTitle && <h2>{subTitle}</h2>}
+      {subTitle && (
+        <h2 className={variant === "white" ? "text-white" : "text-accentColor"}>
+          {subTitle}
+        </h2>
+      )}
     </section>
-  );
-};
+  )
+}
 
-export default ContentHeadline;
+export default ContentHeadline

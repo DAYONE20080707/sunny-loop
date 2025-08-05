@@ -1,16 +1,16 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import SubmitButton from "@/components/ui/button/SubmitButton";
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import SubmitButton from "@/components/ui/button/SubmitButton"
 
 interface FormField {
-  label: string;
-  name: string;
-  type: "text" | "email" | "tel" | "textarea" | "select";
-  placeholder?: string;
-  required: boolean;
-  options?: { value: string; label: string }[];
+  label: string
+  name: string
+  type: "text" | "email" | "tel" | "textarea" | "select"
+  placeholder?: string
+  required: boolean
+  options?: { value: string; label: string }[]
 }
 
 const formFields: FormField[] = [
@@ -34,14 +34,14 @@ const formFields: FormField[] = [
     required: false,
   },
   {
-    label: "氏名",
+    label: "姓",
     name: "lastName",
     type: "text",
     placeholder: "田中",
     required: true,
   },
   {
-    label: "",
+    label: "名",
     name: "firstName",
     type: "text",
     placeholder: "太郎",
@@ -72,79 +72,79 @@ const formFields: FormField[] = [
     label: "お電話番号",
     name: "phone",
     type: "tel",
-    placeholder: "00-0000-0000",
+    placeholder: "042-713-4986",
     required: true,
   },
-  // {
-  //   label: "ご検討中のサービス",
-  //   name: "serviceType",
-  //   type: "select",
-  //   options: [
-  //     { value: "", label: "以下から選択してください" },
-  //     { value: "service1", label: "ご検討中のサービス1" },
-  //     { value: "service2", label: "ご検討中のサービス2" },
-  //     { value: "service3", label: "ご検討中のサービス3" },
-  //   ],
-  //   required: true,
-  // },
   {
     label: "お問い合わせ内容",
+    name: "serviceType",
+    type: "select",
+    options: [
+      { value: "", label: "選択してください" },
+      { value: "service1", label: "ご検討中のサービス1" },
+      { value: "service2", label: "ご検討中のサービス2" },
+      { value: "service3", label: "ご検討中のサービス3" },
+    ],
+    required: true,
+  },
+  {
+    label: "本文",
     name: "message",
     type: "textarea",
     placeholder: "お問い合わせ内容を入力してください",
     required: true,
   },
-];
+]
 
-const initialFormData: Record<string, string> = {};
+const initialFormData: Record<string, string> = {}
 formFields.forEach((field) => {
-  initialFormData[field.name] = "";
-});
+  initialFormData[field.name] = ""
+})
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState(initialFormData);
-  const [loading, setLoading] = useState(false);
-  const [responseMessage, setResponseMessage] = useState("");
-  const router = useRouter();
+  const [formData, setFormData] = useState(initialFormData)
+  const [loading, setLoading] = useState(false)
+  const [responseMessage, setResponseMessage] = useState("")
+  const router = useRouter()
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setResponseMessage("");
+    e.preventDefault()
+    setLoading(true)
+    setResponseMessage("")
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      });
+      })
 
       if (res.ok) {
-        router.push("/contact/thanks");
+        router.push("/contact/thanks")
       } else {
-        const data = await res.json();
-        setResponseMessage(data.error || "送信に失敗しました。");
+        const data = await res.json()
+        setResponseMessage(data.error || "送信に失敗しました。")
       }
     } catch (error) {
-      setResponseMessage("エラーが発生しました。");
+      setResponseMessage("エラーが発生しました。")
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
-    <article className="w-full md:max-w-[1240px] h-auto mx-auto px-5 md:px-5 pt-16 pb-20 md:pt-[120px] md:pb-[134px]">
+    <article className="w-full md:max-w-[1040px] h-auto mx-auto px-5 md:px-5 pt-16 pb-20 md:pt-[120px] md:pb-[134px]">
       <div className="w-full">
         <section>
-          <p className="text-lg font-semibold ![line-height:160%] tracking-[0.03em] whitespace-pre-line">
+          <p className="text-lg ![line-height:160%] tracking-[0.03em] whitespace-pre-line">
             必須項目を全てご入力の上「送信ボタン」を押して、フォームを送信してください。
             <br />
             ※フォームマーケティング・セールスはお断りしております。
@@ -155,20 +155,7 @@ const ContactForm = () => {
           {responseMessage && <p className="text-red-500">{responseMessage}</p>}
           <form onSubmit={handleSubmit}>
             {formFields.map((field) => (
-              <div
-                key={field.name}
-                className={`mb-6 md:mb-10 ${
-                  field.name === "lastName" || field.name === "firstName"
-                    ? "md:w-1/2 md:inline-block"
-                    : "w-full"
-                } ${
-                  field.name === "firstName"
-                    ? "md:pl-3"
-                    : field.name === "lastName"
-                    ? "md:pr-3"
-                    : ""
-                }`}
-              >
+              <div key={field.name} className="mb-6 md:mb-6 w-full">
                 <label className="text-sm md:text-base block font-extrabold mb-1 md:mb-2 ![line-height:200%]">
                   {field.label}{" "}
                   {field.required && (
@@ -183,7 +170,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     className="w-full px-6 py-4 bg-bgLightBlue [&>*]:bg-bgLightBlue appearance-none bg-[length:16px_10px] md:bg-[length:22px_10px] bg-[right_1.5rem_center] bg-no-repeat text-base md:text-lg"
                     style={{
-                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 9L15 1' stroke='%23A38758' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L8 9L15 1' stroke='%231201CB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")`,
                     }}
                   >
                     {field.options.map((option) => (
@@ -204,7 +191,7 @@ const ContactForm = () => {
                         placeholder={field.placeholder}
                         required={field.required}
                         rows={1}
-                        className="w-full px-6 py-4 bg-bgLightBlue placeholder:text-[#EFEFEF] placeholder:text-base md:placeholder:text-lg"
+                        className="w-full px-6 py-4 bg-bgLightBlue placeholder:text-gray-400 placeholder:text-base md:placeholder:text-lg"
                       />
                     ) : (
                       <input
@@ -214,7 +201,7 @@ const ContactForm = () => {
                         onChange={handleChange}
                         placeholder={field.placeholder}
                         required={field.required}
-                        className="w-full px-6 py-4 bg-bgLightBlue placeholder:text-[#EFEFEF] placeholder:text-base md:placeholder:text-lg ![line-height:170%]"
+                        className="w-full px-6 py-4 bg-bgLightBlue placeholder:text-gray-400 placeholder:text-base md:placeholder:text-lg ![line-height:170%]"
                       />
                     )}
                   </>
@@ -237,7 +224,7 @@ const ContactForm = () => {
         </section>
       </div>
     </article>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

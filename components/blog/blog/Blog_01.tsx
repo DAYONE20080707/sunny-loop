@@ -1,17 +1,18 @@
 // components/blog/Blog_01.tsx
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { microcms } from "@/lib/microcms";
-import { Work } from "@/types";
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
-import MoreButton from "@/components/ui/button/MoreButton";
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { microcms } from "@/lib/microcms"
+import { Work } from "@/types"
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
+import LoadMoreButton from "@/components/ui/button/LoadMoreButton"
+import SectionContent from "@/components/ui/frame/SectionContent"
 
 interface BlogProps {
-  limit?: number;
+  limit?: number
 }
 
 const CATEGORIES = [
@@ -19,44 +20,48 @@ const CATEGORIES = [
   { id: "news", name: "お知らせ" },
   { id: "blog", name: "ブログ" },
   { id: "media", name: "メディア" },
-];
+]
 
 const Blog_01 = ({ limit = 3 }: BlogProps) => {
-  const [contents, setContents] = useState<Work[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [contents, setContents] = useState<Work[]>([])
+  const [loading, setLoading] = useState(true)
+  const [activeCategory, setActiveCategory] = useState("all")
+  const [displayCount, setDisplayCount] = useState(limit)
+  const [hasMore, setHasMore] = useState(true)
 
   useEffect(() => {
     const getWorks = async () => {
       try {
         const queries = {
-          limit,
+          limit: 100, // より多くの記事を取得
           ...(activeCategory !== "all" && {
             filters: `category[equals]${activeCategory}`,
           }),
-        };
+        }
 
         const data = await microcms.get({
           endpoint: "works",
           queries,
-        });
+        })
         if (data && Array.isArray(data.contents)) {
-          setContents(data.contents);
+          setContents(data.contents)
+          setDisplayCount(limit)
+          setHasMore(data.contents.length > limit && data.contents.length > 3)
         } else {
-          console.error("Unexpected data format:", data);
+          console.error("Unexpected data format:", data)
         }
       } catch (error) {
-        console.error("Failed to fetch works:", error);
+        console.error("Failed to fetch works:", error)
       }
-      setLoading(false);
-    };
+      setLoading(false)
+    }
 
-    getWorks();
-  }, [limit, activeCategory]);
+    getWorks()
+  }, [limit, activeCategory])
 
   return (
     <>
-      <PageContent className="bg-bgLightBlue">
+      <SectionContent className="">
         <section className="md:max-w-[1200px] mx-auto">
           {/* <ContentHeadline
             enTitle="Blog"
@@ -64,14 +69,14 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
             enTitleClassName=""
             titleClassName=""
           /> */}
-          <div className="flex flex-wrap justify-start md:justify-center gap-x-5 md:gap-20 rounded-full bg-white mx-auto px-5 md:px-20 w-fit">
+          <div className="flex flex-wrap justify-start md:justify-center gap-x-5 md:gap-20 rounded-full bg-accentColor text-white mx-auto px-5 md:px-20 w-fit">
             {CATEGORIES.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`px-1 py-4 transition-all font-bold whitespace-nowrap ${
                   activeCategory === category.id
-                    ? "text-accentColor border-b-4 border-accentColor"
+                    ? "text-white border-b-4 border-white"
                     : "hover:text-accentColor"
                 }`}
               >
@@ -91,7 +96,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-3 md:gap-10 mt-16">
-                {contents.map((post: Work) => (
+                {contents.slice(0, displayCount).map((post: Work) => (
                   <Link
                     key={post.id}
                     href={`/blog/${post.id}`}
@@ -109,8 +114,8 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                           />
                         )}
                       </div>
-                      <div className="bg-white p-6">
-                        <p className="text-lg font-bold break-words min-h-14">
+                      <div className="bg-white py-6">
+                        <p className="text-lg font-medium break-words min-h-14 text-accentColor">
                           {post.title}
                         </p>
                         <p className="mt-2 text-base line-clamp-2">
@@ -139,15 +144,26 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                   </Link>
                 ))}
               </div>
-              <div className="flex justify-center mt-16">
-                <MoreButton className="text-accentColor border-accentColor" />
-              </div>
+              {hasMore && (
+                <div className="flex justify-center mt-16">
+                  <LoadMoreButton
+                    onClick={() => {
+                      const newCount = displayCount + 6
+                      setDisplayCount(newCount)
+                      setHasMore(
+                        newCount < contents.length && contents.length > 3
+                      )
+                    }}
+                    className="text-accentColor border-accentColor"
+                  />
+                </div>
+              )}
             </>
           )}
         </section>
-      </PageContent>
+      </SectionContent>
     </>
-  );
-};
+  )
+}
 
-export default Blog_01;
+export default Blog_01

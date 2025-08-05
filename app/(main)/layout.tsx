@@ -14,7 +14,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <Header1 />
       <main className="flex-1">{children}</main>
       {/* <Footer1 /> */}
-      <Footer2 />
+      <Footer1/>
     </div>
   )
 }

@@ -39,8 +39,8 @@ export default async function BlogDetail_02({ params }: BlogDetailProps) {
 
     return (
       <div className="bg-bgLightBlue pb-24">
-        {/* ↓実データ表示用 */}
-        {/* {post.image && (
+        ↓実データ表示用
+        {post.image && (
           <div className="w-full h-[40vh] max-h-[480px] relative">
             <Image
               src={post.image.url}
@@ -110,7 +110,7 @@ export default async function BlogDetail_02({ params }: BlogDetailProps) {
                         />
                       </div>
                     )}
-                    <div className="p-4">
+                    {/* <div className="p-4">
                       <time className="text-xs block">
                         {new Date(relatedPost.createdAt)
                           .toLocaleDateString("ja-JP", {
@@ -123,13 +123,13 @@ export default async function BlogDetail_02({ params }: BlogDetailProps) {
                       <p className="text-lg font-semibold line-clamp-2 mt-1">
                         {relatedPost.title}
                       </p>
-                    </div>
+                    </div> */}
                   </Link>
                 ))}
               </div>
             </section>
           )}
-        </div> */}
+        </div>
         {/* ↓Admin用仮データ */}
         <div className="w-full h-[40vh] max-h-[480px] relative">
           <Image
