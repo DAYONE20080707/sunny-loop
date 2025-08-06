@@ -7,13 +7,13 @@ const Thanks = () => {
   return (
     <>
       <div>
-        <div className="flex flex-col items-center gap-10 py-16 md:py-[120px]">
+        <div className="flex flex-col items-center gap-10 py-16 md:pb-[157px] md:pt-[137px]">
           <CircleCheck
-            className=" w-20 md:w-[100px] h-auto text-accentColor"
+            className=" w-20 md:w-[120px] h-auto text-accentColor"
             strokeWidth={1}
           />
 
-          <h2 className=" text-2xl md:text-[40px] font-medium tracking-wider text-accentColor">
+          <h2 className=" text-2xl md:text-[40px] font-medium tracking-wider text-accentColor leading-[160%]">
             お問い合わせが送信されました
           </h2>
           <p className="text-base md:text-lg text-center leading-[160%]">

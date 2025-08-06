@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <PageContent>
       <BreadcrumbContainer items={[{ name: "お問い合わせ" }]} />
-      <Lowerkv_01 enTitle="CONTACT" mainTitle="お問い合わせ" />
+      <Lowerkv_01 enTitle="CONTACT US" mainTitle="お問い合わせ" />
       <Contact_01 />
       {/* <Aside_01 /> */}
     </PageContent>

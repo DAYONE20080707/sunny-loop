@@ -13,7 +13,7 @@ const ContactButton = ({
   return (
     <Link
       href="/contact"
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center px-10 py-[9px] rounded-[10px] font-semibold tracking-[0.03em] leading-[160%] whitespace-nowrap ${className}`}
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center px-10 py-[9px] rounded-[10px] font-semibold tracking-[0.03em] leading-[160%] whitespace-nowrap text-base ${className}`}
       onClick={onClick}
     >
       <EnvelopeIcon className="w-[25px] h-[17px] mr-1" />

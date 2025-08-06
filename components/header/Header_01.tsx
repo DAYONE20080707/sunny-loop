@@ -46,7 +46,7 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 ${
+        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 font-outfit ${
           isScrolled ? "" : ""
         }`}
       >
@@ -60,7 +60,7 @@ const Header_01 = () => {
 
           {/* デスクトップ用メニュー */}
           <div className="flex items-center justify-end flex-1 min-w-0">
-            <ul className="hidden md:flex items-center space-x-10 ml-10">
+            <ul className="hidden md:flex items-center space-x-10 ml-10 text-lg">
               {filteredMenu.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>
