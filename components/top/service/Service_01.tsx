@@ -19,7 +19,7 @@ const Service_01 = () => {
   return (
     <>
       <SectionContent className="bg-accentColor">
-        <section className="md:max-w-[1250px] mx-auto space-y-10">
+        <section className="md:max-w-[1200px] mx-auto space-y-10">
           <ContentHeadline
             enTitle="Our Service"
             mainTitle={`SNSを活用して\nビジネスの成長をサポート`}
@@ -28,7 +28,7 @@ const Service_01 = () => {
             variant="white"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:pb-16">
             {servicesToDisplay.map((service) => (
               <ServiceCard
                 key={service.id}

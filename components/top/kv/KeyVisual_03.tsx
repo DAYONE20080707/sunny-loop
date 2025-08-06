@@ -28,7 +28,7 @@ const KeyVisual_03 = () => {
             spImage="/top/kv/kv_img_sp.png"
           />
         </section>
-        <div className="md:max-w-[1440px] mx-auto flex flex-col pt-32 md:pt-0 px-5 md:justify-center h-full relative">
+        <div className="md:max-w-[1480px] mx-auto flex flex-col pt-32 md:pt-0 px-5 md:justify-center h-full relative">
           <TopPageHeadline
             mainTitle={
               <>Infinite <br />Possibilities

@@ -6,15 +6,15 @@ import Menu from "@/components/ui/navigation/Menu"
 import Sns from "@/components/ui/button/SnsButton"
 import FooterLinks from "@/components/ui/navigation/FooterLinks"
 import CompanyInfo from "@/components/ui/navigation/CompanyInfo"
-import ContactButton from "@/components/ui/button/ContactButton"
+import FooterContactButton from "@/components/ui/button/FooterContactButton"
 
 // フッター
 const Footer1 = () => {
   const { companyName, companyPostalCode, companyAddress } = CompanyInfo[0]
   return (
     <footer className="border-t py-10 md:py-24 px-4 md:px-5 bg-baseColor text-white">
-      <div className="md:max-w-[1400px] mx-auto">
-        <div className="md:flex justify-between">
+      <div className="md:max-w-[1200px] mx-auto">
+        <div className="md:flex justify-between items-center">
           <div className="space-y-3">
             <h4 className="w-[100px]">
               {CompanyInfo[0].companyName("tertiary")}
@@ -38,7 +38,7 @@ const Footer1 = () => {
               )}
             </ul>
             <div className="md:w-[198px] mt-7">
-              <ContactButton className="![border-radius:0]" />
+            <FooterContactButton className="" />
             </div>
           </div>
         </div>

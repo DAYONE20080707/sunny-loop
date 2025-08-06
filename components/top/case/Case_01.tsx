@@ -63,14 +63,14 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
           <div className=" grid grid-cols-1 md:grid-cols-3 md:gap-x-10">
             {contents.map((post: Work) => (
               <div key={post.id} className="w-full">
-                <div className="w-full  h-[250px]  mt-5 md:mt-0 rounded-t-2xl">
+                <div className="w-full  max-h-[223px]  mt-5 md:mt-0 rounded-t-[10px] overflow-hidden">
                   {post.image && (
                     <Image
                       src={post.image.url}
                       alt="制作物サムネイル"
                       width={370}
                       height={223}
-                      className="w-full h-full rounded-t-2xl object-cover "
+                      className="w-full h-full object-cover "
                     />
                   )}
                 </div>

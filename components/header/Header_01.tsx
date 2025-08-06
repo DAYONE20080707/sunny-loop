@@ -50,16 +50,16 @@ const Header_01 = () => {
           isScrolled ? "" : ""
         }`}
       >
-        <div className="flex items-center justify-between mx-auto py-4 px-10 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
+        <div className="flex items-center justify-between mx-auto py-[34px] px-6 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
           {/* ロゴ */}
-          <Link href="/" className="w-[200px]">
+          <Link href="/" className="flex-shrink-0 w-[200px]">
             <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("secondary")}
             </div>
           </Link>
 
           {/* デスクトップ用メニュー */}
-          <div className="flex items-center justify-end w-full">
+          <div className="flex items-center justify-end flex-1 min-w-0">
             <ul className="hidden md:flex items-center space-x-10 ml-10">
               {filteredMenu.map((item, index) => (
                 <li key={index}>

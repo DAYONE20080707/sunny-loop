@@ -68,14 +68,14 @@ const Blog_03 = ({ limit = 3 }: BlogProps) => {
                 href={`/blog/${post.id}`}
                 className="w-full block hover:opacity-80 transition-opacity duration-300"
               >
-                <div className="w-full  h-[250px]  rounded-[15px] mt-5 md:mt-0">
+                <div className="w-full  max-h-[223px] overflow-hidden rounded-[10px] mt-5 md:mt-0">
                   {post.image && (
                     <Image
                       src={post.image.url}
                       alt="制作物サムネイル"
                       width={370}
                       height={223}
-                      className="w-full h-full rounded-[10px] object-cover "
+                      className="w-full h-full object-cover "
                     />
                   )}
                 </div>
