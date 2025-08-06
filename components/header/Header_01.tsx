@@ -50,7 +50,7 @@ const Header_01 = () => {
           isScrolled ? "" : ""
         }`}
       >
-        <div className="flex items-center justify-between mx-auto py-[34px] px-6 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
+        <div className="flex items-center justify-between mx-auto py-4 md:py-[34px] px-6 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
           {/* ロゴ */}
           <Link href="/" className="flex-shrink-0 w-[200px]">
             <div className="text-lg font-bold ">

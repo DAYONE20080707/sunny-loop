@@ -62,9 +62,9 @@ export default async function CasesDetail_01({ params }: CasesDetailProps) {
               { name: post.title },
             ]}
           />
-          <SectionContent className="max-w-[1240px]">
+          <SectionContent className="max-w-[1240px] !pt-10">
             <article className="bg-white">
-              <h1 className="text-[32px] font-medium mb-6 leading-[180%]">{post.title}</h1>
+            <h1 className="text-2xl md:text-[32px] font-medium mb-6 leading-[180%]">{post.title}</h1>
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-10 gap-2">
                 <div className="flex flex-wrap gap-2">
                   {Array.isArray(post.category) ? (
@@ -93,7 +93,7 @@ export default async function CasesDetail_01({ params }: CasesDetailProps) {
                 </time>
               </div>
               {post.image && (
-                <div className="w-full h-[250px] md:h-[586px] relative mb-24">
+                <div className="w-full h-[250px] md:h-[586px] relative mb-10 md:mb-24">
                   <Image
                     src={post.image.url}
                     alt={post.title}

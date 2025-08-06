@@ -61,7 +61,7 @@ const Cases_01 = ({ limit = 3 }: CasesProps) => {
 
   return (
     <>
-      <SectionContent className="!pt-[120px]">
+      <SectionContent className="">
         <section className="md:max-w-[1200px] mx-auto">
           {/* <ContentHeadline
             enTitle="Cases"

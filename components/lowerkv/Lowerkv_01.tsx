@@ -15,7 +15,7 @@ const Lowerkv_01: React.FC<Lowerkv_01Props> = ({
   className = ""
 }) => {
   return (
-    <div className={`md:max-w-[1240px] px-5 mx-auto pt-[96px] space-y-10 text-accentColor ${className}`}>
+    <div className={`md:max-w-[1240px] px-5 mx-auto pt-10 md:pt-[96px] space-y-10 text-accentColor ${className}`}>
       <h1 className="text-3xl md:text-[40px] font-medium tracking-[0.05em] leading-[120%] mx-auto">
         <span className="block font-lato text-lg font-extrabold mb-1 ![line-height:120%] tracking-[0.03em]">
           {enTitle}
