@@ -1,20 +1,20 @@
 // components/service/Service_03.tsx
-"use client";
+"use client"
 
-import ContentHeadline from "@/components/ui/frame/ContentHeadline";
-import PageContent from "@/components/ui/frame/PageContent";
-import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01";
-import { serviceData } from "@/components/data/top/ServiceData";
-import MoreLinkButton from "@/components/ui/button/MoreButton";
+import ContentHeadline from "@/components/ui/frame/ContentHeadline"
+import PageContent from "@/components/ui/frame/PageContent"
+import ServiceCard from "@/components/ui/ItemCard/ServiceCard_01"
+import { serviceData } from "@/components/data/top/ServiceData"
+import MoreLinkButton from "@/components/ui/button/MoreButton"
 
 const Service_03 = () => {
   // 表示するサービス数をserviceDataのIDを指定して表示
-  const serviceIdsToDisplay = [1, 2, 3, 4, 5];
+  const serviceIdsToDisplay = [1, 2, 3, 4, 5]
 
   // 指定したIDに基づいてデータをフィルタリング
   const servicesToDisplay = serviceData.filter((service) =>
     serviceIdsToDisplay.includes(service.id)
-  );
+  )
 
   return (
     <>
@@ -36,7 +36,6 @@ const Service_03 = () => {
                 title={service.title}
                 description={service.description}
                 image={service.image} // 画像パスを渡す
-                href={service.href} // リンク先を渡す
                 className="overlay" // テキストを画像の上に配置するためにpositionを指定
               />
             ))}
@@ -50,7 +49,7 @@ const Service_03 = () => {
         </section>
       </PageContent>
     </>
-  );
-};
+  )
+}
 
-export default Service_03;
+export default Service_03

@@ -3,13 +3,12 @@ import Image from "next/image"
 import classNames from "classnames"
 import MoreButton from "@/components/ui/button/MoreButton"
 
-
 interface ServiceCardProps {
   id: number
   title: string
   description: string
   image: string // 画像パスを受け取る
-  href: string // リンク先のURLを受け取る
+  href?: string // リンク先のURLを受け取る（オプショナル）
   className?: string // 任意のクラス名を受け取る
   imageContainerClass?: string // 画像コンテナのクラスを受け取る
 }
@@ -24,9 +23,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageContainerClass = "", // デフォルトの画像コンテナのクラス
 }) => {
   return (
-    <div
-      className={classNames("relative overflow-hidden", className)}
-    >
+    <div className={classNames("relative overflow-hidden", className)}>
       <div
         className={classNames(
           "md:w-[560px] h-[250px] md:h-[400px] md:aspect-[1/1] relative",
@@ -46,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       </div>
 
       <div
-        className={classNames("mt-5 md:mt-0 space-y-5 md:w-[560px]" , {
+        className={classNames("mt-5 md:mt-0 space-y-5 md:w-[560px]", {
           "md:w-[560px] h-[480px] rounded-2xl absolute inset-0 flex flex-col  bg-black/50 text-white":
             className.includes("overlay"),
           "relative text-black": !className.includes("overlay"),
@@ -61,10 +58,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           Service0{id}
         </div>
         <div
-          className={classNames("font-medium font-poppins text-[22px] border-b border-borderGray pb-6", {
-            "text-white": className.includes("overlay"),
-            "text-black": !className.includes("overlay"),
-          })}
+          className={classNames(
+            "font-medium font-poppins text-[22px] border-b border-borderGray pb-6",
+            {
+              "text-white": className.includes("overlay"),
+              "text-black": !className.includes("overlay"),
+            }
+          )}
         >
           {title}
         </div>
@@ -76,7 +76,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         >
           {description}
         </div>
-        <MoreButton href={href} className="text-accentColor border-accentColor" />
+        {href && (
+          <MoreButton
+            href={href}
+            className="text-accentColor border-accentColor"
+          />
+        )}
       </div>
     </div>
   )
