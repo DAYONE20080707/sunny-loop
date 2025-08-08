@@ -35,7 +35,7 @@ const Profile_02 = () => {
               <ProfileCard label="代表者" value="前田圭祐" />
             </div>
             <div>
-              <div className="max-h-[400px]">
+              <div className="max-w-[420px] max-h-[400px]">
                 <Image
                   src="/top/profile/profile.jpg"
                   alt="プロフィール画像"
