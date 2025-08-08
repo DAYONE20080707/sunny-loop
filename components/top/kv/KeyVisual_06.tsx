@@ -1,19 +1,19 @@
 // components/kv/KeyVisual_06.tsx
-"use client";
+"use client"
 
-import FirstViewContent from "@/components/top/kv/FirstViewContent";
-import TopPageHeadline from "@/components/ui/frame/TopPageHeadline";
-import KeyVisualContent from "@/components/top/kv/KeyVisualContent";
-import ScrollButton from "@/components/ui/button/ScrollButton";
+import FirstViewContent from "@/components/top/kv/FirstViewContent"
+import TopPageHeadline from "@/components/ui/frame/TopPageHeadline"
+import KeyVisualContent from "@/components/top/kv/KeyVisualContent"
+import ScrollButton from "@/components/ui/button/ScrollButton"
 
 // キービジュアル
 const KeyVisual_06 = () => {
   const scrollToNextSection = () => {
-    const kvElement = document.getElementById("kv-section");
+    const kvElement = document.getElementById("kv-section")
     if (kvElement && kvElement.nextElementSibling) {
-      kvElement.nextElementSibling.scrollIntoView({ behavior: "smooth" });
+      kvElement.nextElementSibling.scrollIntoView({ behavior: "smooth" })
     }
-  };
+  }
   return (
     <>
       <FirstViewContent className="relative">
@@ -38,7 +38,7 @@ const KeyVisual_06 = () => {
                 <span>Lorem Ipsum</span>
               </>
             }
-            discription={
+            description={
               <>
                 <span className="block  md:w-[600px]">
                   日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります日本語見出し文日本語見出し文はいります
@@ -53,7 +53,7 @@ const KeyVisual_06 = () => {
         </div>
       </FirstViewContent>
     </>
-  );
-};
+  )
+}
 
-export default KeyVisual_06;
+export default KeyVisual_06
