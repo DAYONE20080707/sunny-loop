@@ -46,21 +46,21 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 ${
+        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 font-outfit ${
           isScrolled ? "" : ""
         }`}
       >
-        <div className="flex items-center justify-between mx-auto py-4 px-10 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
+        <div className="flex items-center justify-between mx-auto py-4 md:py-[34px] px-6 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
           {/* ロゴ */}
-          <Link href="/" className="w-[200px]">
+          <Link href="/" className="flex-shrink-0 w-[200px]">
             <div className="text-lg font-bold ">
               {CompanyInfo[0].companyName("secondary")}
             </div>
           </Link>
 
           {/* デスクトップ用メニュー */}
-          <div className="flex items-center justify-end w-full">
-            <ul className="hidden md:flex items-center space-x-10 ml-10">
+          <div className="flex items-center justify-end flex-1 min-w-0">
+            <ul className="hidden md:flex items-center space-x-10 ml-10 text-lg">
               {filteredMenu.map((item, index) => (
                 <li key={index}>
                   <Link href={item.href}>

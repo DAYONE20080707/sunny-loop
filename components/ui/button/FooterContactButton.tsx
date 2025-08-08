@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { EnvelopeIcon } from "@heroicons/react/24/outline"
 
-const ContactButton = ({
+const FooterContactButton = ({
   className = "",
   children = "お問い合わせ",
   onClick,
@@ -13,7 +13,7 @@ const ContactButton = ({
   return (
     <Link
       href="/contact"
-      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center px-10 py-[9px] rounded-[10px] font-semibold tracking-[0.03em] leading-[160%] whitespace-nowrap text-base ${className}`}
+      className={`bg-accentColor text-white cursor-pointer flex items-center justify-center px-10 py-4 font-semibold tracking-[0.03em] leading-[160%] whitespace-nowrap ${className}`}
       onClick={onClick}
     >
       <EnvelopeIcon className="w-[25px] h-[17px] mr-1" />
@@ -22,4 +22,4 @@ const ContactButton = ({
   )
 }
 
-export default ContactButton
+export default FooterContactButton

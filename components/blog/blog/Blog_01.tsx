@@ -103,14 +103,14 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                     className="w-full hover:opacity-90 transition-opacity"
                   >
                     <div className="w-full">
-                      <div className="w-full h-[250px] mt-5 md:mt-0 rounded-t-2xl">
+                      <div className="w-full max-h-[223px] overflow-hidden mt-5 md:mt-0 rounded-t-2xl">
                         {post.image && (
                           <Image
                             src={post.image.url}
                             alt="制作物サムネイル"
                             width={370}
                             height={223}
-                            className="w-full h-full rounded-t-2xl object-cover"
+                            className="w-full h-full object-cover"
                           />
                         )}
                       </div>
@@ -128,13 +128,13 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                             post.category.map((cat, index) => (
                               <span
                                 key={index}
-                                className="text-[#5f5f5f] text-xs"
+                                className="text-[#5f5f5f] text-xs leading-[140%]"
                               >
                                 #{cat}
                               </span>
                             ))
                           ) : (
-                            <span className="text-[#5f5f5f] text-xs">
+                            <span className="text-[#5f5f5f] text-xs leading-[140%]">
                               #{post.category}
                             </span>
                           )}
@@ -145,7 +145,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                 ))}
               </div>
               {hasMore && (
-                <div className="flex justify-center mt-16">
+                <div className="flex justify-center mt-16 md:mt-[93px]">
                   <LoadMoreButton
                     onClick={() => {
                       const newCount = displayCount + 6

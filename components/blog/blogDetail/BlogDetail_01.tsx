@@ -62,9 +62,9 @@ export default async function BlogDetail_01({ params }: BlogDetailProps) {
               { name: post.title },
             ]}
           />
-          <SectionContent className="max-w-[1240px]">
+          <SectionContent className="max-w-[1240px] !pt-10">
             <article className="bg-white">
-              <h1 className="text-3xl font-bold mb-6">{post.title}</h1>
+            <h1 className="text-2xl md:text-[32px] font-medium mb-6 leading-[180%]">{post.title}</h1>
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-10 gap-2">
                 <div className="flex flex-wrap gap-2">
                   {Array.isArray(post.category) ? (
@@ -93,14 +93,14 @@ export default async function BlogDetail_01({ params }: BlogDetailProps) {
                 </time>
               </div>
               {post.image && (
-                <div className="w-full h-[400px] relative mb-24">
-                  <Image
-                    src={post.image.url}
-                    alt={post.title}
-                    fill
-                    className="object-cover rounded-lg"
-                  />
-                </div>
+                <div className="w-full h-[250px] md:h-[586px] relative mb-10 md:mb-24">
+                <Image
+                  src={post.image.url}
+                  alt={post.title}
+                  fill
+                  className="w-full h-full object-cover rounded-[10px]"
+                />
+              </div>
               )}
               <div
                 className="prose max-w-none prose-headings:font-bold prose-h2:text-[24px] prose-h2:mb-6 prose-h2:mt-12 prose-h2:font-medium prose-h2:leading-[160%] prose-h2:text-accentColor prose-h2:font-noto prose-h3:text-xl prose-h3:mb-4 prose-h3:mt-8 prose-p:leading-relaxed prose-p:text-base prose-li:text-base prose-li:leading-relaxed prose-ul:mt-4 prose-ul:mb-6 prose-ul:pl-6 prose-ol:mt-4 prose-ol:mb-6 prose-ol:list-decimal prose-ol:pl-6 prose-ul:list-disc prose-ul:marker:text-accentColor prose-ul:marker:text-[8px]"

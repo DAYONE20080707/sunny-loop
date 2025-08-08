@@ -21,7 +21,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
     <section
       id={id}
       className={classNames(
-        "w-full md:max-w-[1200px] mb-10 md:mb-16 tracking-wide",
+        "w-full mb-10 md:mb-16 tracking-wide",
         variant === "white" ? "text-white" : "text-accentColor",
         className
       )}
@@ -46,7 +46,7 @@ const ContentHeadline: React.FC<ContentHeadlineProps> = ({
       </h3>
       <h1
         className={classNames(
-          "text-[24px] md:text-[40px] font-medium tracking-[0.03em] leading-[160%]",
+          "text-[24px] md:text-[40px] font-medium tracking-[0.05em] leading-[120%]",
           variant === "white" ? "text-white" : "text-accentColor",
           titleClassName
         )}

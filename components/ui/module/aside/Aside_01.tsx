@@ -21,7 +21,7 @@ const Aside_01 = () => {
           </p>
           <div className="w-full flex justify-center mt-6">
             <MoreButton
-              className="!bg-white !text-accentColor"
+              className="!bg-white !text-accentColor md:!w-[350px]"
               href="/contact"
             />
           </div>

@@ -14,10 +14,12 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = "" }) => {
   return (
-    <nav className={`flex items-center space-x-2 text-xs ${className}`}>
+    <nav
+      className={`flex items-center space-x-2 text-xs flex-wrap gap-y-2 ${className}`}
+    >
       <Link
         href="/"
-        className="text-baseColor hover:opacity-80 transition-opacity"
+        className="text-baseColor hover:opacity-80 transition-opacity whitespace-nowrap"
       >
         トップページ
       </Link>
@@ -27,12 +29,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items, className = "" }) => {
           {item.href ? (
             <Link
               href={item.href}
-              className="hover:opacity-80 transition-opacity"
+              className="hover:opacity-80 transition-opacity whitespace-nowrap"
             >
               {item.name}
             </Link>
           ) : (
-            <span className="text-gray-600">{item.name}</span>
+            <span className="text-gray-600 whitespace-nowrap">{item.name}</span>
           )}
         </div>
       ))}

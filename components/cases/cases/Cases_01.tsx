@@ -103,7 +103,7 @@ const Cases_01 = ({ limit = 3 }: CasesProps) => {
                     className="w-full hover:opacity-90 transition-opacity"
                   >
                     <div className="w-full">
-                      <div className="w-full h-[250px] mt-5 md:mt-0 rounded-t-2xl">
+                      <div className="w-full max-h-[223px] overflow-hidden mt-5 md:mt-0 rounded-[10px]">
                         {post.image && (
                           <Image
                             src={post.image.url}
@@ -145,7 +145,7 @@ const Cases_01 = ({ limit = 3 }: CasesProps) => {
                 ))}
               </div>
               {hasMore && (
-                <div className="flex justify-center mt-[88px]">
+                <div className="flex justify-center mt-[88px] md:mt-[112px]">
                   <LoadMoreButton
                     onClick={() => {
                       const newCount = displayCount + 6
