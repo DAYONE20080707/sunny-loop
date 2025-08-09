@@ -20,7 +20,7 @@ export default async function BlogDetail_01({ params }: BlogDetailProps) {
 
   try {
     const post = await microcms.get({
-      endpoint: "works",
+      endpoint: "blogs",
       contentId: id,
     })
 
@@ -28,7 +28,7 @@ export default async function BlogDetail_01({ params }: BlogDetailProps) {
     const [prevPost, nextPost] = await Promise.all([
       microcms
         .get({
-          endpoint: "works",
+          endpoint: "blogs",
           queries: {
             orders: "-publishedAt",
             limit: 1,
@@ -38,7 +38,7 @@ export default async function BlogDetail_01({ params }: BlogDetailProps) {
         .then((res) => res.contents[0]),
       microcms
         .get({
-          endpoint: "works",
+          endpoint: "blogs",
           queries: {
             orders: "publishedAt",
             limit: 1,

@@ -40,7 +40,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
         }
 
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "blogs",
           queries,
         })
         if (data && Array.isArray(data.contents)) {
