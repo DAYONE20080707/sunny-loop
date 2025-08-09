@@ -24,17 +24,7 @@ export type Work = {
   fixed: boolean
 }
 
-export interface Download {
-  id: string
-  title: string
-  content: string
-  date: string
-  image?: {
-    url: string
-  }
-  link: string
-  category: string[]
-}
+
 
 export interface TopContentProps {
   title: React.ReactNode
