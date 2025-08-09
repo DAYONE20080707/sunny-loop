@@ -20,8 +20,8 @@ export type Work = {
   image?: {
     url: string
   }
-  category: string[]
-  fixed: boolean
+  category?: string[]
+
 }
 
 

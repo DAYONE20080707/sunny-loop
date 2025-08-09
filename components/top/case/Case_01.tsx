@@ -24,7 +24,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "cases",
           queries: { limit },
         });
         if (data && Array.isArray(data.contents)) {
