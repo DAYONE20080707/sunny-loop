@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
+
 import { microcms } from "@/lib/microcms";
 import { Work } from "@/types";
 import ContentHeadline from "@/components/ui/frame/ContentHeadline";
@@ -24,7 +24,7 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
     const getWorks = async () => {
       try {
         const data = await microcms.get({
-          endpoint: "works",
+          endpoint: "cases",
           queries: { limit },
         });
         if (data && Array.isArray(data.contents)) {
@@ -75,11 +75,11 @@ const Case_01 = ({ limit = 3 }: CaseProps) => {
                   )}
                 </div>
                 <div className="bg-white mt-6">
-                  <p className="text-lg font-bold break-words min-h-14">
+                  <p className="h-8 text-lg font-bold break-words">
                     {post.title}
                   </p>
                   <p className="mt-2 text-base ">
-                    {contents[0].title}
+                    {post.content}
                   </p>
                 </div>
               </div>

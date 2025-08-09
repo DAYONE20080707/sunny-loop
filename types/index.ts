@@ -21,7 +21,12 @@ export type Work = {
     url: string
   }
   category: string[]
-  fixed: boolean
+  tag?:Tag[]
+}
+
+export type Tag ={
+  id:string
+  name:string
 }
 
 export interface Download {
