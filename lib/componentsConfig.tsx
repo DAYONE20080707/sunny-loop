@@ -1,73 +1,16 @@
 import Header_01 from "@/components/header/Header_01"
-import Header_02 from "@/components/header/Header_02"
-import Header_03 from "@/components/header/Header_03"
-import Header_04 from "@/components/header/Header_04"
 // import About1 from "@/components/about/About1";
 // import About2 from "@/components/about/About_02";
 import Footer1 from "@/components/footer/Footer1"
-import Footer2 from "@/components/footer/Footer2"
-import KeyVisual_01 from "@/components/top/kv/KeyVisual_01"
-import KeyVisual_02 from "@/components/top/kv/KeyVisual_02"
 import KeyVisual_03 from "@/components/top/kv/KeyVisual_03"
-import KeyVisual_04 from "@/components/top/kv/KeyVisual_04"
-import KeyVisual_05 from "@/components/top/kv/KeyVisual_05"
-import KeyVisual_06 from "@/components/top/kv/KeyVisual_06"
-import About_01 from "@/components/top/about/About_01"
 import About_02 from "@/components/top/about/About_02"
-import About_03 from "@/components/top/about/About_03"
-import About_04 from "@/components/top/about/About_04"
-import Strength_01 from "@/components/top/strength/Strength_01"
-import Strength_02 from "@/components/top/strength/Strength_02"
-import Strength_03 from "@/components/top/strength/Strength_03"
-import Strength_04 from "@/components/top/strength/Strength_04"
-import Message_01 from "@/components/top/message/Message_01"
-import Message_02 from "@/components/top/message/Message_02"
-import Message_03 from "@/components/top/message/Message_03"
-import Message_04 from "@/components/top/message/Message_04"
 import Service_01 from "@/components/top/service/Service_01"
-import Service_02 from "@/components/top/service/Service_02"
-import Service_03 from "@/components/top/service/Service_03"
-import Service_04 from "@/components/top/service/Service_04"
-import News_01 from "@/components/top/news/News_01"
-import News_02 from "@/components/top/news/News_02"
-import News_03 from "@/components/top/news/News_03"
-import News_04 from "@/components/top/news/News_04"
-import News_05 from "@/components/top/news/News_05"
-import News_06 from "@/components/top/news/News_06"
 import Case_01 from "@/components/top/case/Case_01"
-import Case_02 from "@/components/top/case/Case_02"
-import Case_03 from "@/components/top/case/Case_03"
-import Case_04 from "@/components/top/case/Case_04"
-import Case_05 from "@/components/top/case/Case_05"
-import Case_06 from "@/components/top/case/Case_06"
-import Blog_01 from "@/components/top/blog/Blog_01"
-import Blog_02 from "@/components/top/blog/Blog_02"
 import Blog_03 from "@/components/top/blog/Blog_03"
-import Blog_04 from "@/components/top/blog/Blog_04"
-import Blog_05 from "@/components/top/blog/Blog_05"
-import Blog_06 from "@/components/top/blog/Blog_06"
-import Plan_01 from "@/components/top/plan/Plan_01"
-import Plan_02 from "@/components/top/plan/Plan_02"
-import Plan_03 from "@/components/top/plan/Plan_03"
-import Plan_04 from "@/components/top/plan/Plan_04"
-import Faq_01 from "@/components/top/faq/Faq_01"
-import Faq_02 from "@/components/top/faq/Faq_02"
-import Profile_01 from "@/components/top/profile/Profile_01"
 import Profile_02 from "@/components/top/profile/Profile_02"
-import Profile_03 from "@/components/top/profile/profile_03"
-import Profile_04 from "@/components/top/profile/profile_04"
-import Flow_01 from "@/components/top/flow/Flow_01"
-import Flow_02 from "@/components/top/flow/Flow_02"
 import Cta_01 from "@/components/ui/module/cta/Cta_01"
-import Cta_02 from "@/components/ui/module/cta/Cta_02"
-import Cta_03 from "@/components/ui/module/cta/Cta_03"
-import Cta_04 from "@/components/ui/module/cta/Cta_04"
 import Aside_01 from "@/components/ui/module/aside/Aside_01"
-import Aside_02 from "@/components/ui/module/aside/Aside_02"
 import Lowerkv_01 from "@/components/lowerkv/Lowerkv_01"
-import Lowerkv_02 from "@/components/lowerkv/Lowerkv_02"
-import Lowerkv_03 from "@/components/lowerkv/Lowerkv_03"
-import Lowerkv_04 from "@/components/lowerkv/Lowerkv_04"
 import Privacy_01 from "@/components/privacy/Privacy_01"
 import Site_01 from "@/components/site/Site_01"
 import LowerAbout_01 from "@/components/about/about/About_01"
@@ -101,12 +44,8 @@ import LowerService3_01 from "@/components/service/service3/Service_01"
 import LowerService3_02 from "@/components/service/service3/Service_02"
 import LowerService3_03 from "@/components/service/service3/Service_03"
 import LowerBlog_01 from "@/components/blog/blog/Blog_01"
-import LowerBlog_02 from "@/components/blog/blog/Blog_02"
-import LowerBlog_03 from "@/components/blog/blog/Blog_03"
 import BlogDetail_01 from "@/components/blog/blogDetail/BlogDetail_01"
-import BlogDetail_02 from "@/components/blog/blogDetail/BlogDetail_02"
 import CasesDetail_01 from "@/components/cases/casesDetail/CasesDetail_01"
-import CasesDetail_02 from "@/components/cases/casesDetail/CasesDetail_02"
 
 // セクション情報とコンポーネントのマッピングの型定義
 interface SectionOption {
@@ -143,9 +82,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       kv: {
@@ -159,12 +95,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "KeyVisual_06", src: "/admin/6.png", alt: "KeyVisual_06" },
         ],
         components: {
-          KeyVisual_01: <KeyVisual_01 />,
-          KeyVisual_02: <KeyVisual_02 />,
           KeyVisual_03: <KeyVisual_03 />,
-          KeyVisual_04: <KeyVisual_04 />,
-          KeyVisual_05: <KeyVisual_05 />,
-          KeyVisual_06: <KeyVisual_06 />,
         },
       },
       about: {
@@ -176,10 +107,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "About_04", src: "/admin/4.png", alt: "About_04" },
         ],
         components: {
-          About_01: <About_01 />,
           About_02: <About_02 />,
-          About_03: <About_03 />,
-          About_04: <About_04 />,
         },
       },
 
@@ -208,9 +136,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Service_01: <Service_01 />,
-          Service_02: <Service_02 />,
-          Service_03: <Service_03 />,
-          Service_04: <Service_04 />,
         },
       },
       // strength: {
@@ -240,11 +165,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Case_01: <Case_01 />,
-          Case_02: <Case_02 />,
-          Case_03: <Case_03 />,
-          Case_04: <Case_04 />,
-          Case_05: <Case_05 />,
-          Case_06: <Case_06 />,
         },
       },
       blog: {
@@ -258,70 +178,65 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Blog_06", src: "/admin/5.png", alt: "Blog_06" },
         ],
         components: {
-          Blog_01: <Blog_01 />,
-          Blog_02: <Blog_02 />,
           Blog_03: <Blog_03 />,
-          Blog_04: <Blog_04 />,
-          Blog_05: <Blog_05 />,
-          Blog_06: <Blog_06 />,
         },
       },
-      plan: {
-        title: "料金プラン",
-        options: [
-          { id: "Plan_01", src: "/admin/1.png", alt: "Plan_01" },
-          { id: "Plan_02", src: "/admin/2.png", alt: "Plan_02" },
-          { id: "Plan_03", src: "/admin/3.png", alt: "Plan_03" },
-          { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
-        ],
-        components: {
-          Plan_01: <Plan_01 />,
-          Plan_02: <Plan_02 />,
-          Plan_03: <Plan_03 />,
-          Plan_04: <Plan_04 />,
-        },
-      },
-      flow: {
-        title: "ご利用の流れ",
-        options: [
-          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
-          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
-        ],
-        components: {
-          Flow_01: <Flow_01 />,
-          Flow_02: <Flow_02 />,
-        },
-      },
-      news: {
-        title: "お知らせ",
-        options: [
-          { id: "News_01", src: "/admin/1.png", alt: "News_01" },
-          { id: "News_02", src: "/admin/2.png", alt: "News_02" },
-          { id: "News_03", src: "/admin/3.png", alt: "News_03" },
-          { id: "News_04", src: "/admin/4.png", alt: "News_04" },
-          { id: "News_05", src: "/admin/5.png", alt: "News_05" },
-          { id: "News_06", src: "/admin/6.png", alt: "News_06" },
-        ],
-        components: {
-          News_01: <News_01 />,
-          News_02: <News_02 />,
-          News_03: <News_03 />,
-          News_04: <News_04 />,
-          News_05: <News_05 />,
-          News_06: <News_06 />,
-        },
-      },
-      faq: {
-        title: "よくある質問",
-        options: [
-          { id: "Faq_01", src: "/admin/1.png", alt: "Faq_01" },
-          { id: "Faq_02", src: "/admin/2.png", alt: "Faq_02" },
-        ],
-        components: {
-          Faq_01: <Faq_01 />,
-          Faq_02: <Faq_02 />,
-        },
-      },
+      // plan: {
+      //   title: "料金プラン",
+      //   options: [
+      //     { id: "Plan_01", src: "/admin/1.png", alt: "Plan_01" },
+      //     { id: "Plan_02", src: "/admin/2.png", alt: "Plan_02" },
+      //     { id: "Plan_03", src: "/admin/3.png", alt: "Plan_03" },
+      //     { id: "Plan_04", src: "/admin/4.png", alt: "Plan_04" },
+      //   ],
+      //   components: {
+      //     Plan_01: <Plan_01 />,
+      //     Plan_02: <Plan_02 />,
+      //     Plan_03: <Plan_03 />,
+      //     Plan_04: <Plan_04 />,
+      //   },
+      // },
+      // flow: {
+      //   title: "ご利用の流れ",
+      //   options: [
+      //     { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
+      //     { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
+      //   ],
+      //   components: {
+      //     Flow_01: <Flow_01 />,
+      //     Flow_02: <Flow_02 />,
+      //   },
+      // },
+      // news: {
+      //   title: "お知らせ",
+      //   options: [
+      //     { id: "News_01", src: "/admin/1.png", alt: "News_01" },
+      //     { id: "News_02", src: "/admin/2.png", alt: "News_02" },
+      //     { id: "News_03", src: "/admin/3.png", alt: "News_03" },
+      //     { id: "News_04", src: "/admin/4.png", alt: "News_04" },
+      //     { id: "News_05", src: "/admin/5.png", alt: "News_05" },
+      //     { id: "News_06", src: "/admin/6.png", alt: "News_06" },
+      //   ],
+      //   components: {
+      //     News_01: <News_01 />,
+      //     News_02: <News_02 />,
+      //     News_03: <News_03 />,
+      //     News_04: <News_04 />,
+      //     News_05: <News_05 />,
+      //     News_06: <News_06 />,
+      //   },
+      // },
+      // faq: {
+      //   title: "よくある質問",
+      //   options: [
+      //     { id: "Faq_01", src: "/admin/1.png", alt: "Faq_01" },
+      //     { id: "Faq_02", src: "/admin/2.png", alt: "Faq_02" },
+      //   ],
+      //   components: {
+      //     Faq_01: <Faq_01 />,
+      //     Faq_02: <Faq_02 />,
+      //   },
+      // },
 
       aside: {
         title: "ASIDE",
@@ -331,7 +246,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Aside_01: <Aside_01 />,
-          Aside_02: <Aside_02 />,
         },
       },
       profile: {
@@ -343,10 +257,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
         ],
         components: {
-          Profile_01: <Profile_01 />,
           Profile_02: <Profile_02 />,
-          Profile_03: <Profile_03 />,
-          Profile_04: <Profile_04 />,
         },
       },
       cta: {
@@ -359,9 +270,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       footer: {
@@ -372,7 +280,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -389,9 +296,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -404,9 +308,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       blog: {
@@ -418,8 +319,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           LowerBlog_01: <LowerBlog_01 />,
-          LowerBlog_02: <LowerBlog_02 />,
-          LowerBlog_03: <LowerBlog_03 />,
         },
       },
       footer: {
@@ -430,7 +329,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -447,9 +345,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -462,9 +357,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       about: {
@@ -536,10 +428,7 @@ export const componentsConfig: ComponentsConfig = {
           { id: "Profile_04", src: "/admin/4.png", alt: "Profile_04" },
         ],
         components: {
-          Profile_01: <Profile_01 />,
           Profile_02: <Profile_02 />,
-          Profile_03: <Profile_03 />,
-          Profile_04: <Profile_04 />,
         },
       },
       footer: {
@@ -550,7 +439,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -567,9 +455,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -582,9 +467,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       plan: {
@@ -602,17 +484,6 @@ export const componentsConfig: ComponentsConfig = {
           LowerPlan_04: <LowerPlan_04 />,
         },
       },
-      flow: {
-        title: "ご利用の流れ",
-        options: [
-          { id: "Flow_01", src: "/admin/1.png", alt: "Flow_01" },
-          { id: "Flow_02", src: "/admin/2.png", alt: "Flow_02" },
-        ],
-        components: {
-          Flow_01: <Flow_01 className="bg-bgLightBlue" />,
-          Flow_02: <Flow_02 className="bg-bgLightBlue" />,
-        },
-      },
       cta: {
         title: "CTA",
         options: [
@@ -623,9 +494,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       footer: {
@@ -636,7 +504,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -653,9 +520,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -668,9 +532,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       faq: {
@@ -694,9 +555,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       footer: {
@@ -707,7 +565,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -724,9 +581,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -739,9 +593,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       contact: {
@@ -761,9 +612,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       footer: {
@@ -774,7 +622,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -791,9 +638,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -806,9 +650,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       about: {
@@ -852,9 +693,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       service1: {
@@ -943,9 +781,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Cta_01: <Cta_01 />,
-          Cta_02: <Cta_02 />,
-          Cta_03: <Cta_03 />,
-          Cta_04: <Cta_04 />,
         },
       },
       footer: {
@@ -956,7 +791,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -973,9 +807,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -988,9 +819,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       privacy: {
@@ -1008,7 +836,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -1025,9 +852,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       lowerkv: {
@@ -1040,9 +864,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Lowerkv_01: <Lowerkv_01 />,
-          Lowerkv_02: <Lowerkv_02 />,
-          Lowerkv_03: <Lowerkv_03 />,
-          Lowerkv_04: <Lowerkv_04 />,
         },
       },
       privacy: {
@@ -1060,7 +881,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -1077,9 +897,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       blogDetail: {
@@ -1090,7 +907,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           BlogDetail_01: <BlogDetail_01 params={{ id: "" }} />,
-          BlogDetail_02: <BlogDetail_02 params={{ id: "" }} />,
         },
       },
       footer: {
@@ -1101,7 +917,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
@@ -1118,9 +933,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Header_01: <Header_01 />,
-          Header_02: <Header_02 />,
-          Header_03: <Header_03 />,
-          Header_04: <Header_04 />,
         },
       },
       caseDetail: {
@@ -1131,7 +943,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           CasesDetail_01: <CasesDetail_01 params={{ id: "" }} />,
-          CasesDetail_02: <CasesDetail_02 params={{ id: "" }} />,
         },
       },
       footer: {
@@ -1142,7 +953,6 @@ export const componentsConfig: ComponentsConfig = {
         ],
         components: {
           Footer1: <Footer1 />,
-          Footer2: <Footer2 />,
         },
       },
     },
