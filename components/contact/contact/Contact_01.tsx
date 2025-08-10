@@ -45,7 +45,7 @@ const formFields: FormField[] = [
     name: "firstName",
     type: "text",
     placeholder: "太郎",
-    required: false,
+    required: true,
   },
   {
     label: "部署",
@@ -72,7 +72,7 @@ const formFields: FormField[] = [
     label: "お電話番号",
     name: "phone",
     type: "tel",
-    placeholder: "042-713-4986",
+    placeholder: "03-1234-5678",
     required: true,
   },
   {
@@ -214,7 +214,7 @@ const ContactForm = () => {
             <p className="text-center ![line-height:160%] text-xs md:text-sm mt-6 md:mt-16 tracking-[0.05em] whitespace-pre-line">
               上記ボタンを押すことで、利用規約および、当社のサービス等に関する情報を提供する目的で、
               <br />
-              〇〇〇〇〇〇〇が送信された個人情報を保管・処理することに同意したものとみなされます。
+              Sunny Loopが送信された個人情報を保管・処理することに同意したものとみなされます。
               <br />
               お客様はこれらの情報提供をいつでも停止できます。
               <br />

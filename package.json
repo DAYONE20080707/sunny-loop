@@ -19,6 +19,7 @@
     "lucide-react": "^0.435.0",
     "microcms-js-sdk": "^3.1.2",
     "next": "14.2.6",
+    "nodemailer": "^7.0.5",
     "react": "^18",
     "react-dom": "^18",
     "react-feather": "^2.0.10",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
