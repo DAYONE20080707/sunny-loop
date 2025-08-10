@@ -28,7 +28,7 @@ export default async function CasesDetail_01({ params }: CasesDetailProps) {
     const [prevPost, nextPost] = await Promise.all([
       microcms
         .get({
-          endpoint: "works",
+          endpoint: "cases",
           queries: {
             orders: "-publishedAt",
             limit: 1,
@@ -38,7 +38,7 @@ export default async function CasesDetail_01({ params }: CasesDetailProps) {
         .then((res) => res.contents[0]),
       microcms
         .get({
-          endpoint: "works",
+          endpoint: "cases",
           queries: {
             orders: "publishedAt",
             limit: 1,

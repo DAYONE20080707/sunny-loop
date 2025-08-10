@@ -14,28 +14,26 @@ interface BlogProps {
 
 const Blog_01 = ({ limit = 3 }: BlogProps) => {
   const [contents, setContents] = useState<Work[]>([])
-  const [allCategories, setAllCategories] = useState<
-    { id: string; name: string }[]
-  >([])
+  const [allCategories, setAllCategories] = useState<{ id: string; name: string }[]>([])
   const [loading, setLoading] = useState(true)
   const [activeCategory, setActiveCategory] = useState("all")
   const [displayCount, setDisplayCount] = useState(limit)
   const [hasMore, setHasMore] = useState(true)
 
-  // 初回: 全記事を取得してカテゴリ一覧を作成
   useEffect(() => {
-    const fetchCategories = async () => {
+    const getData = async () => {
       try {
-        const data = await microcms.get({
+        // blogs 全件取得（カテゴリ一覧生成用）
+        const blogsData = await microcms.get({
           endpoint: "blogs",
           queries: { limit: 100 },
         })
 
-        if (data && Array.isArray(data.contents)) {
+        if (blogsData && Array.isArray(blogsData.contents)) {
+          // カテゴリ一覧作成
           const categorySet = new Set<string>()
           const categoryList: { id: string; name: string }[] = []
-
-          data.contents.forEach((post: Work) => {
+          blogsData.contents.forEach((post: Work) => {
             if (Array.isArray(post.category)) {
               post.category.forEach((cat) => {
                 if (!categorySet.has(cat)) {
@@ -50,37 +48,29 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
               }
             }
           })
-
           setAllCategories([{ id: "all", name: "すべて" }, ...categoryList])
-        }
-      } catch (error) {
-        console.error("カテゴリ取得失敗:", error)
-      }
-    }
 
-    fetchCategories()
-  }, [])
+          // 記事データ取得
+          const queries = {
+            limit: 100,
+            ...(activeCategory !== "all" && {
+              filters: `category[equals]${activeCategory}`,
+            }),
+          }
+          const filteredData = await microcms.get({
+            endpoint: "blogs",
+            queries,
+          })
 
-  // activeCategory が変わるたびに記事取得
-  useEffect(() => {
-    const fetchArticles = async () => {
-      setLoading(true)
-      try {
-        const queries =
-          activeCategory === "all"
-            ? { limit: 100 }
-            : { limit: 100, filters: `category[contains]${activeCategory}` }
-
-        const data = await microcms.get({
-          endpoint: "blogs",
-          queries,
-        })
-
-        if (data && Array.isArray(data.contents)) {
-          setContents(data.contents)
-          setDisplayCount(limit)
-          setHasMore(data.contents.length > limit && data.contents.length > 3)
+          if (filteredData && Array.isArray(filteredData.contents)) {
+            setContents(filteredData.contents)
+            setDisplayCount(limit)
+            setHasMore(filteredData.contents.length > limit && filteredData.contents.length > 3)
+          } else {
+            setContents([])
+          }
         } else {
+          setAllCategories([])
           setContents([])
         }
       } catch (error) {
@@ -89,30 +79,29 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
       setLoading(false)
     }
 
-    fetchArticles()
-  }, [activeCategory, limit])
+    getData()
+  }, [limit, activeCategory])
 
   return (
     <SectionContent>
       <section className="md:max-w-[1200px] mx-auto">
         {/* カテゴリータブ */}
-      <div className="flex flex-wrap justify-start md:justify-center rounded-full mx-auto px-5 md:px-20 w-fit bg-accentColor divide-x divide-white/30 overflow-hidden">
-  {allCategories.map((category) => (
-    <button
-      key={category.id}
-      onClick={() => setActiveCategory(category.id)}
-      className={`px-4 py-2 transition-all font-bold whitespace-nowrap text-white
-        ${
-          activeCategory === category.id
-            ? "bg-accentColor opacity-80"
-            : "bg-accentColor hover:opacity-80"
-        }`}
-    >
-      {category.name}
-    </button>
-  ))}
-</div>
-
+        <div className="flex flex-wrap justify-start md:justify-center rounded-full mx-auto px-5 md:px-20 w-fit bg-accentColor divide-x divide-white/30 overflow-hidden">
+          {allCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-4 py-2 transition-all font-bold whitespace-nowrap text-white
+                ${
+                  activeCategory === category.id
+                    ? "bg-accentColor opacity-80"
+                    : "bg-accentColor hover:opacity-80"
+                }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
 
         {/* コンテンツ */}
         {loading ? (
@@ -178,9 +167,7 @@ const Blog_01 = ({ limit = 3 }: BlogProps) => {
                   onClick={() => {
                     const newCount = displayCount + 6
                     setDisplayCount(newCount)
-                    setHasMore(
-                      newCount < contents.length && contents.length > 3
-                    )
+                    setHasMore(newCount < contents.length && contents.length > 3)
                   }}
                   className="text-accentColor border-accentColor"
                 />
