@@ -24,8 +24,9 @@ export async function POST(req: Request) {
       message,
     } = await req.json()
 
-    // 必須項目のバリデーション（inquiryType, contactMethod を除外）
-    if (!company || !lastName || !firstName || !email || !phone || !message) {
+    // 必須項目のバリデーション（任意項目は除外）
+    const requiredFields = [lastName, firstName, email, phone, message]
+    if (requiredFields.some((field) => !field || field.trim() === "")) {
       return NextResponse.json(
         { error: "すべての必須項目を入力してください。" },
         { status: 400 }
@@ -56,7 +57,7 @@ export async function POST(req: Request) {
       emailBody += `【お問い合わせ種別】 ${inquiryTypeText}\n`
     }
 
-    emailBody += `会社名: ${company}\n`
+    if (company) emailBody += `会社名: ${company}\n`
     if (department) emailBody += `部署: ${department}\n`
     emailBody += `姓: ${lastName}\n`
     emailBody += `名: ${firstName}\n`
@@ -84,9 +85,9 @@ export async function POST(req: Request) {
       replyTo: email,
     }
 
-    // ② ユーザー宛の確認メール（空の項目を含めない）
+    // ② ユーザー宛の確認メール
     let userEmailBody = `${lastName} ${firstName} 様\n\nお問い合わせありがとうございます。\n以下の内容で受け付けました。\n\n------------------\n`
-    userEmailBody += emailBody // 上で作成した本文をそのまま使用
+    userEmailBody += emailBody
     userEmailBody += "\n------------------\n\n担当者が確認後、ご連絡いたします。\n\nよろしくお願いいたします。"
 
     const userMailOptions = {
