@@ -90,7 +90,7 @@ export async function POST(req: Request) {
     userEmailBody += "\n------------------\n\n担当者が確認後、ご連絡いたします。\n\nよろしくお願いいたします。"
 
     const userMailOptions = {
-      from: `"株式会社Fukaya Green Onionお問い合わせ" <${EMAIL_USER}>`,
+      from: `"Sunny Loop お問い合わせ" <${EMAIL_USER}>`,
       to: email,
       subject: "【自動返信】お問い合わせありがとうございます。",
       text: userEmailBody,
