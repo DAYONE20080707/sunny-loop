@@ -1,9 +1,7 @@
-// components/header/Header_01
-
+// components/header/Header_01.tsx
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { useState, useEffect } from "react"
 import Menu from "@/components/ui/navigation/Menu"
 import ContactButton from "@/components/ui/button/ContactButton"
@@ -15,14 +13,13 @@ const Header_01 = () => {
 
   // スクロール状態とメニュー開閉状態を管理
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false) // メニュー開閉状態
-  const [isAnimating, setIsAnimating] = useState(false) // フェードアニメーション用状態
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
@@ -35,7 +32,7 @@ const Header_01 = () => {
       setTimeout(() => {
         setIsMenuOpen(false)
         setIsAnimating(false)
-      }, 200) // アニメーションの長さに合わせて調整
+      }, 200)
     } else {
       setIsMenuOpen(true)
     }
@@ -46,69 +43,52 @@ const Header_01 = () => {
   return (
     <>
       <HeaderContent
-        className={`fixed top-6 md:top-[50px] left-1/2 transform -translate-x-1/2 z-10 text-accentColor font-bold w-full transition-all duration-300 font-outfit ${
+        className={`fixed top-6 md:top-[50px] left-0 z-10 text-accentColor font-bold transition-all duration-300 font-outfit ${
           isScrolled ? "" : ""
         }`}
       >
-        <div className="flex items-center justify-between mx-auto py-4 md:py-[34px] px-6 w-full rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]">
+        {/* 固定幅 1440px（見切れるソリッド） */}
+        <div
+          className="w-[1440px] flex items-center justify-between py-4 md:py-[34px] px-6 rounded-[10px] bg-white shadow-[0_4px_20px_0_rgba(0,0,0,0.10)]"
+        >
           {/* ロゴ */}
           <Link href="/" className="flex-shrink-0 w-[200px]">
-            <div className="text-lg font-bold ">
-              {CompanyInfo[0].companyName("secondary")}
+            <div className="text-lg font-bold">
+              {companyName("secondary")}
             </div>
           </Link>
 
-          {/* デスクトップ用メニュー */}
-          <div className="flex items-center justify-end flex-1 min-w-0">
-            <ul className="hidden md:flex items-center space-x-10 ml-10 text-lg">
+          {/* デスクトップ用メニュー（固定幅） */}
+          <div>
+            <ul className="hidden  lg:flex  justify-between w-[1000px] items-center text-base ">
               {filteredMenu.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="w-[160px] text-center ">
                   <Link href={item.href}>
                     <div>{item.enName}</div>
                   </Link>
                 </li>
               ))}
-              <ContactButton className="w-fit">CONTACT US</ContactButton>
+              <li className="w-[160px] ml-4">
+                <ContactButton className="w-full">CONTACT US</ContactButton>
+              </li>
             </ul>
           </div>
 
           {/* ハンバーガーメニューボタン */}
           <button
-            className={`block md:hidden text-black transition-transform duration-300 ${
+            className={`block lg:hidden text-black transition-transform duration-300 ${
               isMenuOpen ? "rotate-90" : "rotate-0"
             }`}
             onClick={handleMenuToggle}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1"
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="w-8 h-8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
               </svg>
             )}
           </button>
@@ -116,7 +96,7 @@ const Header_01 = () => {
 
         {/* スマホ用メニュー */}
         <div
-          className={`absolute top-20 left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white md:hidden transition-opacity duration-300 ${
+          className={`absolute top-20 left-0 w-full h-screen bg-gray-800 bg-opacity-70 text-white lg:hidden transition-opacity duration-300 ${
             isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           } ${isAnimating ? "pointer-events-auto" : ""}`}
         >
@@ -128,7 +108,6 @@ const Header_01 = () => {
                 </Link>
               </li>
             ))}
-            {/* ContactButton */}
             <li>
               <ContactButton
                 className="w-full py-4 font-normal"
