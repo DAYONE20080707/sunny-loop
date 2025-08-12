@@ -37,8 +37,8 @@ const spectral = Spectral({
 // metadata に viewport を統合
 export const metadata: Metadata = {
   title: {
-    template: "HP制作システム",
-    default: "HP制作システム",
+    template: "価値を育てるSNSの伴走者 Sunny Loop",
+    default: "私たちは、SNSを一過性の手段ではなく、信頼を育み、価値を積み上げる“長期的な資産”と捉えています。一つひとつの取り組みに誠実に向き合い、日々の実行と改善を重ねながら、お客様の未来を共につくるパートナーであり続けます。",
   },
   viewport: {
     maximumScale: 1,
