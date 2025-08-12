@@ -30,7 +30,7 @@ const formFields: FormField[] = [
     label: "会社名",
     name: "company",
     type: "text",
-    placeholder: "株式会社〇〇〇〇〇〇",
+    placeholder: "Sunny Loop",
     required: false,
   },
   {
@@ -81,9 +81,9 @@ const formFields: FormField[] = [
     type: "select",
     options: [
       { value: "", label: "選択してください" },
-      { value: "service1", label: "ご検討中のサービス1" },
-      { value: "service2", label: "ご検討中のサービス2" },
-      { value: "service3", label: "ご検討中のサービス3" },
+      { value: "sns-consulting", label: "SNS運用/コンサルティング" },
+      { value: "video-content", label: "映像制作コンテンツ企画/制作" },
+
     ],
     required: true,
   },
