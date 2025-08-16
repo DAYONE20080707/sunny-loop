@@ -12,10 +12,6 @@ const LogoMarquee = () => {
     "/top/logo/logo4.png",
     "/top/logo/logo5.png",
     "/top/logo/logo6.png",
-    "/top/logo/logo7.png",
-    "/top/logo/logo8.png",
-    "/top/logo/logo9.png",
-    "/top/logo/logo10.png",
   ]
 
   return (
@@ -31,7 +27,7 @@ const LogoMarquee = () => {
                 alt={`Logo ${index + 1}`}
                 width={120}
                 height={60}
-                className="h-16 md:h-20 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain max-w-[180px]"
               />
             </div>
           ))}
@@ -46,7 +42,22 @@ const LogoMarquee = () => {
                 alt={`Logo ${index + 1}`}
                 width={120}
                 height={60}
-                className="h-16 md:h-20 w-auto object-contain"
+                className="h-16 md:h-20 w-auto object-contain max-w-[180px]"
+              />
+            </div>
+          ))}
+          {/* 3つ目のロゴセット（無限ループ用） */}
+          {logos.map((logo, index) => (
+            <div
+              key={`second-${index}`}
+              className="flex-shrink-0 mx-4 md:mx-8"
+            >
+              <Image
+                src={logo}
+                alt={`Logo ${index + 1}`}
+                width={120}
+                height={60}
+                className="h-16 md:h-20 w-auto object-contain max-w-[180px]"
               />
             </div>
           ))}
