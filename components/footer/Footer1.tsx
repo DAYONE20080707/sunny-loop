@@ -14,11 +14,11 @@ const Footer1 = () => {
   return (
     <footer className="border-t py-10 md:py-24 px-4 md:px-5 bg-baseColor text-white">
       <div className="md:max-w-[1200px] mx-auto">
-        <div className="md:flex justify-between items-center">
+        <div className="md:flex justify-between items-start">
           <div className="space-y-3">
-            <h4 className="w-[100px]">
+            {/* <h4 className="w-[100px]">
               {CompanyInfo[0].companyName("tertiary")}
-            </h4>
+            </h4> */}
             <p className="font-light">
               {companyPostalCode}
               <br />
