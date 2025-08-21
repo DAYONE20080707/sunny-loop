@@ -62,7 +62,7 @@ const Footer1 = () => {
               ))}
             </ul> */}
           </div>
-          <ul className="md:flex items-center md:space-x-10 font-light mt-4 md:mt-0 space-y-5 md:space-y-0 py-4">
+          {/* <ul className="md:flex items-center md:space-x-10 font-light mt-4 md:mt-0 space-y-5 md:space-y-0 py-4">
             {FooterLinks.map((item, index) => (
               <li key={index}>
                 <Link href={item.href}>
@@ -70,10 +70,10 @@ const Footer1 = () => {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         <small className="mt-8 flex justify-end items-center font-light">
-          ©0000aaaaa. ALL Rights Reserved.
+          ©Sunny Loop. ALL Rights Reserved.
         </small>
       </div>
     </footer>
