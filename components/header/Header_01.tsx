@@ -53,9 +53,9 @@ const Header_01 = () => {
         >
           {/* ロゴ */}
           <Link href="/" className="flex-shrink-0 w-[200px]">
-            <div className="text-lg font-bold">
+            {/* <div className="text-lg font-bold">
               {companyName("secondary")}
-            </div>
+            </div> */}
           </Link>
 
           {/* デスクトップ用メニュー（固定幅） */}
