@@ -211,7 +211,7 @@ const ContactForm = () => {
             <div className="flex justify-center mt-10 md:mt-16">
               <SubmitButton loading={loading} />
             </div>
-            <p className="text-center ![line-height:160%] text-xs md:text-sm mt-6 md:mt-16 tracking-[0.05em] whitespace-pre-line">
+            {/* <p className="text-center ![line-height:160%] text-xs md:text-sm mt-6 md:mt-16 tracking-[0.05em] whitespace-pre-line">
               上記ボタンを押すことで、利用規約および、当社のサービス等に関する情報を提供する目的で、
               <br />
               Sunny Loopが送信された個人情報を保管・処理することに同意したものとみなされます。
@@ -219,7 +219,7 @@ const ContactForm = () => {
               お客様はこれらの情報提供をいつでも停止できます。
               <br />
               個人情報の開示や削除依頼等のお問い合わせ先、およびお客様の個人情報を尊重して保護するための弊社取り組みについては、<br />プライバシーポリシーをご覧ください。
-            </p>
+            </p> */}
           </form>
         </section>
       </div>
