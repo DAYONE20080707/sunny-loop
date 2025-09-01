@@ -4,6 +4,8 @@ import type { Metadata } from "next"
 import ToastProvider from "@/components/providers/ToastProvider"
 
 import { Noto_Sans_JP, Outfit, Lato, Spectral } from "next/font/google"
+import { GoogleTagManager } from '@next/third-parties/google'
+
 
 // Noto Sans JP フォントの設定
 const notoSansJP = Noto_Sans_JP({
@@ -65,6 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         }
       >
         <ToastProvider />
+          <GoogleTagManager gtmId="GTM-MKM78TTC" />
         {children}
       </body>
     </html>
